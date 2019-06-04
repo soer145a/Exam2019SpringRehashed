@@ -1,0 +1,1060 @@
+.reset, body, #gevinst p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-y: hidden;
+}
+
+#baggrund {
+  transform: scale(1.2);
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+}
+
+#baggrund img {
+  z-index: 0;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+}
+
+#frame {
+  width: 51vw;
+  height: 62vh;
+  position: absolute;
+  top: 9vw;
+  left: 25vw;
+  z-index: 1;
+  background-color: black;
+  opacity: 0.7;
+}
+
+#baggrundFrame {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0vw;
+  left: 0;
+  z-index: 3;
+}
+
+#baggrundFrame img {
+  width: 97vw;
+  height: 100vh;
+  z-index: 4;
+  transform: scale(1.1);
+}
+
+#spilOverlay {
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  transform: scale(0.65);
+  z-index: 4;
+}
+
+#startSpil {
+  position: absolute;
+  left: 45.5vw;
+  bottom: -0.5vw;
+  z-index: 4;
+  transform: scale(0.9);
+}
+
+#autoPlay {
+  position: absolute;
+  bottom: 1vw;
+  right: 38vw;
+  z-index: 10;
+}
+
+#autoPlaytext {
+  position: absolute;
+  color: white;
+  bottom: 2vw;
+  right: 39.7vw;
+  z-index: 110;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.8em;
+  pointer-events: none;
+}
+
+#satsLabel {
+  color: white;
+  position: absolute;
+  bottom: 2vw;
+  left: 32vw;
+  z-index: 10;
+}
+
+#satsLabel h2 {
+  position: absolute;
+  top: 0vw;
+  left: 1vw;
+}
+
+#satsLabel input {
+  top: 3vw;
+  left: 1vw;
+  position: absolute;
+  width: 5vw;
+  transform: scale(1.1);
+}
+
+#saldoFelt {
+  color: white;
+  position: absolute;
+  bottom: 2vw;
+  left: 18vw;
+  z-index: 10;
+}
+
+#saldoFelt h2 {
+  position: absolute;
+  top: 0vw;
+  left: 1vw;
+}
+
+#saldoFelt #saldoText {
+  position: absolute;
+  top: 2vw;
+  left: 1vw;
+}
+
+#gevinstBorder {
+  position: absolute;
+  width: 11vw;
+  height: 2vw;
+  bottom: 5vw;
+  right: 20vw;
+  z-index: 10;
+}
+
+#gevinst p {
+  color: white;
+  margin: 1vw;
+  transform: translate(3vw, -5.3vw) scale(1.5);
+  z-index: 11;
+}
+
+#wheelArea {
+  z-index: 2;
+  width: 70vw;
+  height: 70vh;
+  transform: scale(0.745);
+  position: absolute;
+  top: 4vw;
+  left: 15vw;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 0.4vw;
+}
+
+#wheelArea .wheel {
+  z-index: 3;
+  display: grid;
+  grid-gap: 1.1vw;
+  grid-template-columns: 1fr;
+}
+
+#wheelArea .wheel .displayCaseDiv {
+  width: 100%;
+  height: 13vw;
+  z-index: 2;
+}
+
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 100;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.7);
+  /* Black w/ opacity */
+}
+
+.modal .container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 3vw;
+  margin: 4vw;
+}
+
+.modal .container img {
+  width: 15vw;
+  animation: puls 0.5s infinite alternate;
+}
+
+@keyframes puls {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+/* Modal Content/Box */
+.modal-content {
+  margin: 15% auto;
+  /* 15% from the top and centered */
+  width: 80%;
+  /* Could be more or less, depending on screen size */
+}
+
+.dot {
+  background-color: #00c2cc;
+  border-radius: 50%;
+  position: absolute;
+}
+
+#myBtn {
+  position: absolute;
+  z-index: 10;
+}
+
+.text {
+  transform: translateY(4vw);
+  width: 10vw;
+  height: 3vw;
+}
+
+.text .victoryText {
+  text-align: center;
+  margin-top: 3vw;
+}
+
+.text #modalGevinst2,
+.text #modalGevinst1,
+.text #modalGevinst3 {
+  text-align: center;
+  margin-top: 0vw;
+  font-size: 2em;
+}
+
+.storGevinst {
+  background-color: #f9a602;
+  color: black;
+}
+
+.mellemGevinst {
+  background-color: #c0c0c0;
+  color: black;
+}
+
+.lilleGevinst {
+  background-color: #cd7f32;
+  color: black;
+}
+
+.nitte {
+  color: black;
+  background-color: white;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0c2461;
+}
+
+#formContainer {
+  width: 80%;
+  margin: 0 auto;
+  background-color: white;
+  margin-top: 90px;
+  box-shadow: 0px 0px 45px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 7.5px;
+}
+
+/* 
+#formLogin {
+  display: block;
+  width: 60%;
+  height: 400px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 30px;
+
+} */
+#formLogin {
+  height: 400px;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+  grid-template-rows: 1fr 1fr;
+}
+
+#loginInfo {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+#loginButtons {
+  grid-row-start: 2;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  margin-top: 0px;
+}
+
+label p {
+  text-align: left;
+  margin-left: 10px;
+  font-size: 15px;
+  margin-block-end: 0em;
+  font-family: "Lato", sans-serif;
+}
+
+input {
+  border: none;
+  border-bottom: 1px solid black;
+  outline: none;
+}
+
+#formLoginButton {
+  margin: 10px;
+  margin-top: 15px;
+  width: 161px;
+  border: none;
+  padding: 5px;
+  font-family: "Lato", sans-serif;
+}
+
+#formUser {
+  font-family: "Lato", sans-serif;
+}
+
+#formUser p {
+  margin-block-end: 0em;
+}
+
+#formUserButton {
+  margin: 10px;
+  width: 161px;
+  border: none;
+  padding: 5px;
+  font-family: "Lato", sans-serif;
+}
+
+#formContainer #formUserBlock {
+  display: none;
+}
+
+#formUserBlock {
+  width: 80%;
+  height: 400px;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  box-shadow: 0px 0px 45px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 7.5px;
+  background-color: white;
+  animation-name: slideIn;
+  position: absolute;
+  animation-timing-function: ease-out;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  z-index: 2;
+}
+
+#formUserBlock label p {
+  margin-left: 0;
+  padding-left: 20px;
+}
+
+#formUserBlock input {
+  margin-left: 20px;
+  width: 70%;
+}
+
+.nextStep {
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+#formUserBlockFormButton {
+  width: 158px;
+  border: none;
+  padding: 5px;
+  font-family: "Lato", sans-serif;
+}
+
+#formContainer #formUserInfo {
+  height: 400px;
+  display: none;
+  width: 80%;
+}
+
+#formUserInfo {
+  height: 400px;
+  display: none;
+  width: 80%;
+}
+
+#nemID {
+  display: none;
+}
+
+#formUserInfo {
+  padding-top: 10px;
+  padding-bottom: 30px;
+  box-shadow: 0px 0px 45px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 7.5px;
+  background-color: white;
+  animation-name: slideIn;
+  position: absolute;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  z-index: 2;
+}
+
+#formUserInfo label p {
+  margin-left: 0;
+  padding-left: 20px;
+}
+
+#formUserInfo input {
+  margin-left: 20px;
+  width: 70%;
+}
+
+#formUserInfoButton {
+  width: 158px;
+  border: none;
+  padding: 5px;
+  font-family: "Lato", sans-serif;
+}
+
+#nemID {
+  padding: 10px;
+  height: 420px;
+  width: 75%;
+  box-shadow: 0px 0px 45px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 7.5px;
+  background-color: white;
+  animation-name: slideIn;
+  position: absolute;
+  animation-timing-function: ease-out;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  z-index: 2;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-400px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translate(0px);
+  }
+}
+
+#nemID p {
+  margin-left: 10px;
+  font-family: "Lato", sans-serif;
+}
+
+.nemIdPlaceholder {
+  width: 180px;
+  height: 200px;
+  background-color: lightgray;
+  margin: 10px;
+}
+
+.opretBruger {
+  width: 158px;
+  border: none;
+  padding: 5px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  font-family: "Lato", sans-serif;
+  margin-left: 10px;
+}
+
+.opretBruger a {
+  color: black;
+  text-decoration: none;
+  font-family: "Lato", sans-serif;
+}
+
+@media screen and (min-width: 627px) {
+  #formContainer {
+    margin-top: 12px;
+    height: 350px;
+    background-color: transparent;
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+  }
+  #formLogin {
+    background-color: white;
+    width: 100%;
+    height: 310px;
+    border-radius: 7.5px;
+    box-shadow: 0px 0px 45px 0px rgba(0, 0, 0, 0.75);
+  }
+  #formLogin {
+    grid-template-columns: 32% 36% 32%;
+  }
+  #formUserBlock {
+    height: 310px;
+  }
+  #formContainer #formUserInfo {
+    height: 310px;
+  }
+  #formUserBlock input {
+    width: 60%;
+  }
+  #formUserInfo input {
+    width: 60%;
+  }
+  #nemID {
+    height: 330px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #formLogin {
+    margin-top: 200px;
+  }
+  #formLogin {
+    grid-template-columns: 36% 28% 36%;
+  }
+  #formUserBlock input {
+    width: 50%;
+  }
+  #formUserInfo input {
+    width: 50%;
+  }
+  #formContainer {
+    margin-top: 100px;
+    height: 450px;
+  }
+  #formUserBlock {
+    margin-top: 100px;
+    height: 310px;
+  }
+  #formUserInfo {
+    margin-top: 100px;
+    height: 310px;
+  }
+  #nemID {
+    margin-top: 100px;
+    height: 330px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #formContainer {
+    width: 70%;
+  }
+  #formLogin {
+    grid-template-columns: 38% 24% 38%;
+  }
+  #formUserBlock {
+    width: 70%;
+  }
+  #formContainer #formUserInfo {
+    display: none;
+    width: 70%;
+  }
+  #nemID {
+    width: 68%;
+  }
+  #formLoginButton {
+    margin: 0px;
+    margin-top: 15px;
+  }
+  #formUserButton {
+    margin: 0px;
+    margin-top: 10px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #formContainer {
+    width: 60%;
+  }
+  #formUserBlock {
+    width: 60%;
+  }
+  #formContainer #formUserInfo {
+    display: none;
+    width: 60%;
+  }
+  #nemID {
+    width: 58%;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  #formContainer {
+    width: 50%;
+  }
+  #formUserBlock {
+    width: 50%;
+  }
+  #formContainer #formUserInfo {
+    display: none;
+    width: 50%;
+  }
+  #nemID {
+    width: 48%;
+  }
+}
+
+body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: "Audiowide", cursive;
+}
+
+p {
+  font-family: "Lato", sans-serif;
+}
+
+header {
+  width: 100%;
+  height: 50px;
+  background-color: #a88952;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 0 auto;
+}
+
+.dsLogoMobil img {
+  width: 35px;
+  padding: 7px 10px 10px 20px;
+}
+
+.dsLogoDesktop {
+  display: none;
+}
+
+.casinoLogo img {
+  width: 150px;
+  padding: 10px;
+}
+
+.logInd {
+  width: 80px;
+  height: 50px;
+  background-color: transparent;
+  border: none;
+  margin-left: 20px;
+  font-family: "Lato", sans-serif;
+  font-size: 1.2em;
+}
+
+.logInd a {
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+  float: right;
+}
+
+.logInd a:hover {
+  color: #544529;
+}
+
+.kampangeBillede {
+  margin-bottom: 4vw;
+  margin-top: -2px;
+}
+
+.baggrund {
+  width: 100%;
+}
+
+.baggrund img {
+  width: 100%;
+  margin-top: -10px;
+}
+
+.baggrundUnivers img {
+  width: 100%;
+}
+
+.alien {
+  background-image: url(flyvendealien-01.26d210b8.svg);
+  background-size: 100% 100%;
+  width: 50vw;
+  height: 15vh;
+  position: absolute;
+  top: 5.5vh;
+  left: -55vw;
+  animation-name: alien;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  animation-direction: alternate;
+}
+
+@keyframes alien {
+  0% {
+    transform: translateX(0vw) translateY(-5vh);
+  }
+  50% {
+    transform: translateY(2vh) translateX(12.3vw);
+  }
+  100% {
+    transform: translateX(55vw) translateY(4vh);
+  }
+}
+
+.rumRejsenSkilt img {
+  width: 37vw;
+  position: absolute;
+  left: 56vw;
+  top: 18vw;
+}
+
+.spilNuKnap {
+  background-image: url(spilknap-03.e3a217e4.svg);
+  background-size: 100% 100%;
+  width: 27vw;
+  height: 10vh;
+  position: absolute;
+  top: 40vw;
+  left: 58vw;
+  animation-name: scaleknap;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+  animation-direction: alternate;
+}
+
+@keyframes scaleknap {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+.spilNuKnap:hover {
+  cursor: pointer;
+}
+
+#containerIndhold {
+  margin-top: -290px;
+}
+
+.textKampange {
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 8vw;
+}
+
+.ikoner {
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 28px;
+  margin-bottom: 8vw;
+}
+
+.ikon {
+  width: 40vw;
+  margin: 0 auto;
+}
+
+#insertMoney img {
+  width: 100%;
+}
+
+#spinIkon img {
+  width: 100%;
+}
+
+#payoutIkon img {
+  width: 100%;
+}
+
+.videoContainer {
+  width: 90%;
+  margin: 0 auto;
+  border: 1px solid black;
+  margin-bottom: 8vw;
+}
+
+.video {
+  width: 100%;
+  height: 250px;
+  border: 1px solid blue;
+}
+
+footer {
+  width: 100%;
+  background-color: #a88952;
+  padding-top: 2vw;
+}
+
+footer p {
+  color: white;
+  font-family: "Lato", sans-serif;
+}
+
+footer a {
+  color: white;
+  font-family: "Lato", sans-serif;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #544529;
+}
+
+.textContainer {
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 2vw;
+}
+
+.footerLogo {
+  width: 180px;
+  height: 35px;
+  margin-left: 15px;
+}
+
+.text {
+  width: 44vw;
+  height: 150px;
+  display: grid;
+  margin-bottom: 3vw;
+  margin-top: 5vw;
+  text-align: center;
+}
+
+.text p {
+  margin-block-start: 0em;
+}
+
+.textAdresse {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  text-align: center;
+}
+
+.kontaktKundeservice {
+  grid-row-start: 2;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  text-align: center;
+}
+
+.kontaktKundeservice p {
+  margin-block-start: 0px;
+  margin-block-end: 10px;
+}
+
+.kundeserviceKnap {
+  height: 40px;
+  font-family: "Lato", sans-serif;
+  font-weight: 800;
+  background-color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+.kundeserviceKnap a {
+  color: black;
+}
+
+#footerSponsor {
+  background-color: white;
+}
+
+.sponsorbar {
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.sponsor {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.sponsor img {
+  width: 100%;
+}
+
+.stopSpillet {
+  padding-top: 10px;
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+}
+
+.wlaLogo {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+  padding-top: 10px;
+}
+
+@media screen and (min-width: 627px) {
+  .casinoLogo {
+    text-align: center;
+  }
+  .logInd {
+    width: 90%;
+  }
+  #containerIndhold {
+    margin-top: -480px;
+  }
+  .alien {
+    height: 25vh;
+  }
+  .rumRejsenSkilt {
+    top: -5vw;
+    position: absolute;
+  }
+  .ikoner {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .ikon {
+    width: 25vw;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .logoDesktop {
+    width: 150px;
+    padding: 10px 10px 10px 20px;
+  }
+  .dsLogoMobil {
+    display: none;
+  }
+  .dsLogoDesktop {
+    display: block;
+  }
+  .kampangeBillede {
+    height: 975px;
+  }
+  #containerIndhold {
+    margin-top: -600px;
+  }
+  .alien {
+    height: 30vh;
+    top: 10vw;
+  }
+  .ikon {
+    width: 150px;
+    height: 150px;
+  }
+  .ikoner {
+    margin-bottom: 4vw;
+  }
+  .videoContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+  }
+  .textContainer {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+  }
+  .text {
+    width: 20vw;
+    text-align: left;
+    margin-top: 0vw;
+  }
+  .textAdresse {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    text-align: left;
+  }
+  .kontaktKundeservice {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    text-align: left;
+  }
+  .kundeserviceKnap {
+    padding: 5px;
+  }
+  .footerLogo {
+    margin-left: 0px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .kampangeBillede {
+    height: 1290px;
+  }
+  #containerIndhold {
+    margin-top: -780px;
+  }
+  .alien {
+    height: 40vh;
+    top: 10vw;
+  }
+  .textKampange {
+    width: 65%;
+  }
+  .textKampange p {
+    width: 100%;
+    font-size: 1em;
+    line-height: 23px;
+  }
+  .ikoner {
+    width: 65%;
+    grid-gap: 25px;
+  }
+  .ikon {
+    width: 18vw;
+    height: 18vw;
+  }
+  .videoContainer {
+    width: 65%;
+  }
+  .textContainer {
+    width: 90%;
+  }
+  .sponsorbar {
+    width: 60%;
+  }
+}
+
+
+/*# sourceMappingURL=/output.c16d2514.css.map */
