@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/soer145a/exam2019Spring.git"
+    "url": "git+https://github.com/soer145a/Exam2019SpringRehashed.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/soer145a/exam2019Spring/issues"
+    "url": "https://github.com/soer145a/Exam2019SpringRehashed.git/issues"
   },
-  "homepage": "https://github.com/soer145a/exam2019Spring#readme",
+  
   "dependencies": {
     "dist": "^0.1.2",
     "gsap": "^2.1.2",
