@@ -17,7 +17,6 @@
   "bugs": {
     "url": "https://github.com/soer145a/Exam2019SpringRehashed.git/issues"
   },
-  
   "dependencies": {
     "dist": "^0.1.2",
     "gsap": "^2.1.2",
