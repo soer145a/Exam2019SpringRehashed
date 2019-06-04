@@ -1,0 +1,256 @@
+$DisplayFont: "Oswald", sans-serif;
+$TextFont: "Lato", sans-serif;
+
+$MainRed: #ff5c3c;
+$MainOrange: #fd8f07;
+$MainGreen: #05c46b;
+$MainBlue: #00c2cc;
+$MainPurple: #8e44ad;
+$MainDarkBlue: #0c2461;
+$MainYellow: #ffd32a;
+.reset {
+  margin: 0;
+  padding: 0;
+}
+body {
+  @extend .reset;
+  overflow-y: hidden;
+}
+#baggrund {
+  transform: scale(1.2);
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  img {
+    z-index: 0;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+  }
+}
+#frame {
+  width: 51vw;
+  height: 62vh;
+  position: absolute;
+  top: 9vw;
+  left: 25vw;
+  z-index: 1;
+  background-color: black;
+  opacity: 0.7;
+}
+#baggrundFrame {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0vw;
+  left: 0;
+  z-index: 3;
+
+  img {
+    width: 97vw;
+
+    height: 100vh;
+    z-index: 4;
+    transform: scale(1.1);
+  }
+}
+#spilOverlay {
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  transform: scale(0.65);
+  z-index: 4;
+}
+#startSpil {
+  position: absolute;
+
+  left: 45.5vw;
+  bottom: -0.5vw;
+
+  z-index: 4;
+  transform: scale(0.9);
+}
+#autoPlay {
+  position: absolute;
+  bottom: 1vw;
+
+  right: 38vw;
+  z-index: 10;
+}
+#autoPlaytext {
+  position: absolute;
+  color: white;
+  bottom: 2vw;
+
+  right: 39.7vw;
+  z-index: 110;
+  font-family: $DisplayFont;
+  font-size: 1.8em;
+  pointer-events: none;
+}
+
+#satsLabel {
+  color: white;
+  position: absolute;
+  bottom: 2vw;
+  left: 32vw;
+  z-index: 10;
+  h2 {
+    position: absolute;
+    top: 0vw;
+    left: 1vw;
+  }
+  input {
+    top: 3vw;
+    left: 1vw;
+    position: absolute;
+    width: 5vw;
+    transform: scale(1.1);
+  }
+}
+#saldoFelt {
+  color: white;
+  position: absolute;
+  bottom: 2vw;
+  left: 18vw;
+  z-index: 10;
+  h2 {
+    position: absolute;
+    top: 0vw;
+    left: 1vw;
+  }
+  #saldoText {
+    position: absolute;
+    top: 2vw;
+    left: 1vw;
+  }
+}
+
+#gevinstBorder {
+  position: absolute;
+  width: 11vw;
+  height: 2vw;
+  bottom: 5vw;
+  right: 20vw;
+  z-index: 10;
+}
+#gevinst p {
+  color: white;
+  @extend .reset;
+  margin: 1vw;
+  transform: translate(3vw, -5.3vw) scale(1.5);
+
+  z-index: 11;
+}
+
+#wheelArea {
+  z-index: 2;
+  width: 70vw;
+  height: 70vh;
+  transform: scale(0.745);
+  position: absolute;
+  top: 4vw;
+  left: 15vw;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 0.4vw;
+
+  .wheel {
+    z-index: 3;
+    display: grid;
+    grid-gap: 1.1vw;
+    grid-template-columns: 1fr;
+
+    .displayCaseDiv {
+      width: 100%;
+      height: 13vw;
+      z-index: 2;
+    }
+  }
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 100; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.7); /* Black w/ opacity */
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3vw;
+    margin: 4vw;
+
+    img {
+      width: 15vw;
+      animation: puls 0.5s infinite alternate;
+    }
+  }
+}
+
+@keyframes puls {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.1);
+  }
+}
+
+/* Modal Content/Box */
+.modal-content {
+  margin: 15% auto; /* 15% from the top and centered */
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+.dot {
+  background-color: $MainBlue;
+  border-radius: 50%;
+  position: absolute;
+}
+#myBtn {
+  position: absolute;
+  z-index: 10;
+}
+
+.text {
+  transform: translateY(4vw);
+  width: 10vw;
+  height: 3vw;
+
+  .victoryText {
+    text-align: center;
+    margin-top: 3vw;
+  }
+  #modalGevinst2,
+  #modalGevinst1,
+  #modalGevinst3 {
+    text-align: center;
+    margin-top: 0vw;
+    font-size: 2em;
+  }
+}
+.storGevinst {
+  background-color: #f9a602;
+  color: black;
+}
+.mellemGevinst {
+  background-color: #c0c0c0;
+  color: black;
+}
+.lilleGevinst {
+  background-color: #cd7f32;
+  color: black;
+}
+.nitte {
+  color: black;
+  background-color: white;
+}
