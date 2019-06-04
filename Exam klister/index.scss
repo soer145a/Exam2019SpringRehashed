@@ -70,12 +70,15 @@ header {
 }
 
 .baggrund img {
-  width: 100%;
+  width: 104%;
   margin-top: -10px;
+  margin-left: -5px;
 }
 
 .baggrundUnivers img {
   width: 100%;
+  position: relative;
+  z-index: 10;
 }
 
 .alien {
@@ -84,6 +87,7 @@ header {
   width: 50vw;
   height: 15vh;
   position: absolute;
+  z-index: 11;
   top: 5.5vh;
   left: -55vw;
   animation-name: alien;
@@ -109,6 +113,7 @@ header {
 .rumRejsenSkilt img {
   width: 37vw;
   position: absolute;
+  z-index: 12;
   left: 56vw;
   top: 18vw;
 }
@@ -119,6 +124,7 @@ header {
   width: 27vw;
   height: 10vh;
   position: absolute;
+  z-index: 13;
   top: 40vw;
   left: 58vw;
   animation-name: scaleknap;
@@ -315,11 +321,12 @@ footer a:hover {
   }
 
   #containerIndhold {
-    margin-top: -480px;
+    margin-top: -460px;
   }
 
   .alien {
-    height: 25vh;
+    height: 230px;
+    top: 80px;
   }
 
   .rumRejsenSkilt {
@@ -354,7 +361,7 @@ footer a:hover {
   }
 
   #containerIndhold {
-    margin-top: -600px;
+    margin-top: -560px;
   }
   .alien {
     height: 30vh;
@@ -414,12 +421,16 @@ footer a:hover {
   }
 
   #containerIndhold {
-    margin-top: -780px;
+    margin-top: -740px;
+  }
+
+  .baggrund img {
+    width: 100.7%;
   }
 
   .alien {
     height: 40vh;
-    top: 10vw;
+    top: 14vw;
   }
   .textKampange {
     width: 65%;
