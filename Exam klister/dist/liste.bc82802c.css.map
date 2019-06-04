@@ -1,0 +1,1 @@
+{"version":3,"sources":["liste.css"],"names":[],"mappings":"AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA","file":"liste.bc82802c.css","sourceRoot":"..","sourcesContent":["body {\r\n  margin: 0;\r\n  padding: 0;\r\n}\r\n#container {\r\n  display: grid;\r\n  grid-template-columns: repeat(5, 1fr);\r\n}\r\n"]}

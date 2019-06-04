@@ -1,0 +1,11 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+#container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+
+/*# sourceMappingURL=/liste.bc82802c.css.map */
