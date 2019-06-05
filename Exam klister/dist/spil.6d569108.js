@@ -7797,7 +7797,7 @@ _TweenLite._gsScope._gsDefine("TimelineLite", ["core.Animation", "core.SimpleTim
   	}
   	return time;
   }
-  	//translates the supplied time on the root/global timeline into the corresponding local time inside a particular animation, factoring in all nesting and timeScales
+  		//translates the supplied time on the root/global timeline into the corresponding local time inside a particular animation, factoring in all nesting and timeScales
   function globalToLocal(time, animation) {
   	var scale = 1;
   	time -= localToGlobal(0, animation);
@@ -11461,7 +11461,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51422" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62037" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
