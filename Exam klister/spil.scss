@@ -426,3 +426,126 @@ body {
   color: black;
   background-color: white;
 }
+@media only screen and (min-width: 1200px) and (max-width: 1920) {
+  body {
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
+  #baggrund {
+    transform: scale(1.2);
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    img {
+      z-index: 0;
+      position: absolute;
+      width: 100vw;
+      height: 100vh;
+    }
+  }
+  #frame {
+    width: 50vw;
+    height: 58vh;
+    position: absolute;
+    top: 11vw;
+    left: 25vw;
+    z-index: 1;
+    background-color: black;
+    opacity: 0.7;
+  }
+  #baggrundFrame {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0vw;
+    left: 0;
+    z-index: 3;
+
+    img {
+      width: 100vw;
+
+      height: 100vh;
+      z-index: 4;
+      transform: scale(1);
+    }
+  }
+  #spilOverlay {
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    transform: scale(0.6);
+    z-index: 4;
+  }
+
+  #startSpil {
+    position: absolute;
+
+    left: 45.5vw;
+    bottom: 0.1vw;
+
+    z-index: 4;
+    transform: scale(0.8);
+  }
+  #autoPlay {
+    position: absolute;
+    bottom: 1.8vw;
+
+    right: 35vw;
+    z-index: 10;
+  }
+  #autoPlaytext {
+    position: absolute;
+    color: white;
+    bottom: 2.8vw;
+
+    right: 37vw;
+    z-index: 110;
+    font-family: $DisplayFont;
+    font-size: 1.8em;
+    pointer-events: none;
+  }
+
+  #wheelArea {
+    z-index: 2;
+    width: 70vw;
+    height: 70vh;
+    transform: scale(0.745);
+    position: absolute;
+    top: 6vw;
+    left: 15vw;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 0.4vw;
+
+    .wheel {
+      z-index: 3;
+      display: grid;
+      grid-gap: 1.1vw;
+      grid-template-columns: 1fr;
+
+      .displayCaseDiv {
+        width: 100%;
+        height: 13vw;
+        z-index: 2;
+      }
+    }
+  }
+
+  #gevinstBorder {
+    position: absolute;
+    width: 11vw;
+    height: 2vw;
+    bottom: 6vw;
+    right: 20vw;
+    z-index: 10;
+    transition: 0.5s;
+  }
+  #gevinst p {
+    color: white;
+    margin: 1vw;
+    transform: translate(3vw, -5.3vw) scale(1.5);
+
+    z-index: 11;
+  }
+}
