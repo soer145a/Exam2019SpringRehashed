@@ -2830,7 +2830,11 @@ _TweenLite._gsScope._gsDefine("TweenMax", ["core.Animation", "core.SimpleTimelin
 
         distances.max = max - min;
         distances.min = min;
+<<<<<<< HEAD
         distances.v = l = vars.amount || vars.each * (wrap > l ? l - 1 : !axis ? Math.max(wrap, l / wrap) : axis === "y" ? l / wrap : wrap) || 0;
+=======
+        distances.v = l = vars.amount || vars.each * (wrap > l ? l : !axis ? Math.max(wrap, l / wrap) : axis === "y" ? l / wrap : wrap) || 0;
+>>>>>>> a2632ded49880d8e2a47865cdf6665e5a6b4e1e1
         distances.b = l < 0 ? base - l : base;
       }
 
@@ -2860,7 +2864,11 @@ _TweenLite._gsScope._gsDefine("TweenMax", ["core.Animation", "core.SimpleTimelin
       p = TweenMax.prototype = _TweenLite.default.to({}, 0.1, {}),
       _blankArray = [];
 
+<<<<<<< HEAD
   TweenMax.version = "2.1.3";
+=======
+  TweenMax.version = "2.1.2";
+>>>>>>> a2632ded49880d8e2a47865cdf6665e5a6b4e1e1
   p.constructor = TweenMax;
   p.kill()._gc = false;
   TweenMax.killTweensOf = TweenMax.killDelayedCallsTo = _TweenLite.default.killTweensOf;
@@ -3488,7 +3496,11 @@ _TweenLite._gsScope._gsDefine("TweenMax", ["core.Animation", "core.SimpleTimelin
 
 
   p.progress = function (value, suppressEvents) {
+<<<<<<< HEAD
     return !arguments.length ? this.duration() ? this._time / this._duration : this.ratio : this.totalTime(this.duration() * (this._yoyo && (this._cycle & 1) !== 0 ? 1 - value : value) + this._cycle * (this._duration + this._repeatDelay), suppressEvents);
+=======
+    return !arguments.length ? this._time / this.duration() : this.totalTime(this.duration() * (this._yoyo && (this._cycle & 1) !== 0 ? 1 - value : value) + this._cycle * (this._duration + this._repeatDelay), suppressEvents);
+>>>>>>> a2632ded49880d8e2a47865cdf6665e5a6b4e1e1
   };
 
   p.totalProgress = function (value, suppressEvents) {
@@ -3606,7 +3618,11 @@ _TweenLite._gsScope._gsDefine("plugins.CSSPlugin", ["plugins.TweenPlugin", "Twee
       p = CSSPlugin.prototype = new _TweenLite.TweenPlugin("css");
 
   p.constructor = CSSPlugin;
+<<<<<<< HEAD
   CSSPlugin.version = "2.1.3";
+=======
+  CSSPlugin.version = "2.1.0";
+>>>>>>> a2632ded49880d8e2a47865cdf6665e5a6b4e1e1
   CSSPlugin.API = 2;
   CSSPlugin.defaultTransformPerspective = 0;
   CSSPlugin.defaultSkewType = "compensated";
@@ -3631,8 +3647,11 @@ _TweenLite._gsScope._gsDefine("plugins.CSSPlugin", ["plugins.TweenPlugin", "Twee
       _relNumExp = /(?:\d|\-\d|\.\d|\-\.\d|\+=\d|\-=\d|\+=.\d|\-=\.\d)+/g,
       _valuesExp = /(?:\+=|\-=|\-|\b)[\d\-\.]+[a-zA-Z0-9]*(?:%|\b)/gi,
       //finds all the values that begin with numbers or += or -= and then a number. Includes suffixes. We use this to split complex values apart like "1px 5px 20px rgb(255,102,51)"
+<<<<<<< HEAD
   _valuesExpWithCommas = /(?:\+=|\-=|\-|\b)[\d\-\.]+[a-zA-Z0-9]*(?:%|\b),?/gi,
       //finds all the values that begin with numbers or += or -= and then a number. Includes suffixes. We use this to split complex values apart like "1px 5px 20px rgb(255,102,51)"
+=======
+>>>>>>> a2632ded49880d8e2a47865cdf6665e5a6b4e1e1
   _NaNExp = /(?![+-]?\d*\.?\d+|[+-]|e[+-]\d+)[^0-9]/g,
       //also allows scientific notation and doesn't kill the leading -/+ in -= and +=
   _suffixExp = /(?:\d|\-|\+|=|#|\.)*/g,
@@ -3666,8 +3685,12 @@ _TweenLite._gsScope._gsDefine("plugins.CSSPlugin", ["plugins.TweenPlugin", "Twee
     }
   },
       _createElement = function _createElement(type, ns) {
+<<<<<<< HEAD
     var e = _doc.createElementNS ? _doc.createElementNS(ns || "http://www.w3.org/1999/xhtml", type) : _doc.createElement(type);
     return e.style ? e : _doc.createElement(type); //some environments won't allow access to the element's style when created with a namespace in which case we default to the standard createElement() to work around the issue. Also note that when GSAP is embedded directly inside an SVG file, createElement() won't allow access to the style object in Firefox (see https://greensock.com/forums/topic/20215-problem-using-tweenmax-in-standalone-self-containing-svg-file-err-cannot-set-property-csstext-of-undefined/).
+=======
+    return ns && _doc.createElementNS ? _doc.createElementNS(ns, type) : _doc.createElement(type);
+>>>>>>> a2632ded49880d8e2a47865cdf6665e5a6b4e1e1
   },
       _tempDiv = _createElement("div"),
       _tempImg = _createElement("img"),
@@ -4402,7 +4425,11 @@ _TweenLite._gsScope._gsDefine("plugins.CSSPlugin", ["plugins.TweenPlugin", "Twee
         return a.join(",");
       }
 
+<<<<<<< HEAD
       vals = v.match(delim === "," ? _valuesExp : _valuesExpWithCommas) || [];
+=======
+      vals = v.match(_valuesExp) || [];
+>>>>>>> a2632ded49880d8e2a47865cdf6665e5a6b4e1e1
       i = vals.length;
 
       if (numVals > i--) {
@@ -4411,7 +4438,11 @@ _TweenLite._gsScope._gsDefine("plugins.CSSPlugin", ["plugins.TweenPlugin", "Twee
         }
       }
 
+<<<<<<< HEAD
       return (pfx && v !== "none" ? v.substr(0, v.indexOf(vals[0])) || pfx : pfx) + vals.join(delim) + sfx; //note: prefix might be different, like for clipPath it could start with inset( or polygon(
+=======
+      return pfx + vals.join(delim) + sfx;
+>>>>>>> a2632ded49880d8e2a47865cdf6665e5a6b4e1e1
     };
 
     return _formatter2;
@@ -5108,7 +5139,11 @@ _TweenLite._gsScope._gsDefine("plugins.CSSPlugin", ["plugins.TweenPlugin", "Twee
         rect,
         width;
 
+<<<<<<< HEAD
     if (_doc.createElementNS && _docElement.appendChild && !force) {
+=======
+    if (_doc.createElementNS && !force) {
+>>>>>>> a2632ded49880d8e2a47865cdf6665e5a6b4e1e1
       //IE8 and earlier doesn't support SVG anyway
       svg = _createSVG("svg", _docElement);
       rect = _createSVG("rect", svg, {
@@ -5282,7 +5317,11 @@ _TweenLite._gsScope._gsDefine("plugins.CSSPlugin", ["plugins.TweenPlugin", "Twee
 
     isDefault = !s || s === "none" || s === "matrix(1, 0, 0, 1, 0, 0)";
 
+<<<<<<< HEAD
     if (_transformProp && isDefault && !e.offsetParent && e !== _docElement) {
+=======
+    if (_transformProp && isDefault && !e.offsetParent) {
+>>>>>>> a2632ded49880d8e2a47865cdf6665e5a6b4e1e1
       //note: if offsetParent is null, that means the element isn't in the normal document flow, like if it has display:none or one of its ancestors has display:none). Firefox returns null for getComputedStyle() if the element is in an iframe that has display:none. https://bugzilla.mozilla.org/show_bug.cgi?id=548397
       //browsers don't report transforms accurately unless the element is in the DOM and has a display value that's not "none". Firefox and Microsoft browsers have a partial bug where they'll report transforms even if display:none BUT not any percentage-based values like translate(-50%, 8px) will be reported as if it's translate(0, 8px).
       n = style.display;
@@ -6253,10 +6292,17 @@ _TweenLite._gsScope._gsDefine("plugins.CSSPlugin", ["plugins.TweenPlugin", "Twee
   });
 
   _registerComplexSpecialProp("clipPath", {
+<<<<<<< HEAD
     defaultValue: "inset(0%)",
     prefix: true,
     multi: true,
     formatter: _getFormatter("inset(0% 0% 0% 0%)", false, true)
+=======
+    defaultValue: "inset(0px)",
+    prefix: true,
+    multi: true,
+    formatter: _getFormatter("inset(0px 0px 0px 0px)", false, true)
+>>>>>>> a2632ded49880d8e2a47865cdf6665e5a6b4e1e1
   });
 
   _registerComplexSpecialProp("borderRadius", {
@@ -6673,11 +6719,15 @@ _TweenLite._gsScope._gsDefine("plugins.CSSPlugin", ["plugins.TweenPlugin", "Twee
       difData = _cssDif(t, bs, _getAllStyles(t), vars, cnptLookup);
       t.setAttribute("class", b);
       pt.data = difData.firstMPT;
+<<<<<<< HEAD
 
       if (t.style.cssText !== cssText) {
         //only apply if things change. Otherwise, in cases like a background-image that's pulled dynamically, it could cause a refresh. See https://greensock.com/forums/topic/20368-possible-gsap-bug-switching-classnames-in-chrome/.
         t.style.cssText = cssText; //we recorded cssText before we swapped classes and ran _getAllStyles() because in cases when a className tween is overwritten, we remove all the related tweening properties from that class change (otherwise class-specific stuff can't override properties we've directly set on the target's style object due to specificity).
       }
+=======
+      t.style.cssText = cssText; //we recorded cssText before we swapped classes and ran _getAllStyles() because in cases when a className tween is overwritten, we remove all the related tweening properties from that class change (otherwise class-specific stuff can't override properties we've directly set on the target's style object due to specificity).
+>>>>>>> a2632ded49880d8e2a47865cdf6665e5a6b4e1e1
 
       pt = pt.xfirst = cssp.parse(t, difData.difs, pt, plugin); //we record the CSSPropTween as the xfirst so that we can handle overwriting propertly (if "className" gets overwritten, we must kill all the properties associated with the className part of the tween, so we can loop through from xfirst to the pt itself)
 
@@ -7781,7 +7831,11 @@ _TweenLite._gsScope._gsDefine("TimelineLite", ["core.Animation", "core.SimpleTim
 
         distances.max = max - min;
         distances.min = min;
+<<<<<<< HEAD
         distances.v = l = vars.amount || vars.each * (wrap > l ? l - 1 : !axis ? Math.max(wrap, l / wrap) : axis === "y" ? l / wrap : wrap) || 0;
+=======
+        distances.v = l = vars.amount || vars.each * (wrap > l ? l : !axis ? Math.max(wrap, l / wrap) : axis === "y" ? l / wrap : wrap) || 0;
+>>>>>>> a2632ded49880d8e2a47865cdf6665e5a6b4e1e1
         distances.b = l < 0 ? base - l : base;
       }
 
@@ -7791,7 +7845,11 @@ _TweenLite._gsScope._gsDefine("TimelineLite", ["core.Animation", "core.SimpleTim
   },
       p = TimelineLite.prototype = new _TweenLite.SimpleTimeline();
 
+<<<<<<< HEAD
   TimelineLite.version = "2.1.3";
+=======
+  TimelineLite.version = "2.1.2";
+>>>>>>> a2632ded49880d8e2a47865cdf6665e5a6b4e1e1
   TimelineLite.distribute = _distribute;
   p.constructor = TimelineLite;
   p.kill()._gc = p._forcingPlayhead = p._hasPause = false;
@@ -8188,6 +8246,7 @@ _TweenLite._gsScope._gsDefine("TimelineLite", ["core.Animation", "core.SimpleTim
       time += self._time - prevTime;
     }
 
+<<<<<<< HEAD
     if (self._hasPause && !self._forcingPlayhead && !suppressEvents) {
       if (time > prevTime) {
         tween = self._first;
@@ -8215,6 +8274,8 @@ _TweenLite._gsScope._gsDefine("TimelineLite", ["core.Animation", "core.SimpleTim
       }
     }
 
+=======
+>>>>>>> a2632ded49880d8e2a47865cdf6665e5a6b4e1e1
     if (time >= totalDur - _tinyNum && time >= 0) {
       //to work around occasional floating point math artifacts.
       self._totalTime = self._time = totalDur;
@@ -8283,6 +8344,36 @@ _TweenLite._gsScope._gsDefine("TimelineLite", ["core.Animation", "core.SimpleTim
         }
       }
     } else {
+<<<<<<< HEAD
+=======
+      if (self._hasPause && !self._forcingPlayhead && !suppressEvents) {
+        if (time >= prevTime) {
+          tween = self._first;
+
+          while (tween && tween._startTime <= time && !pauseTween) {
+            if (!tween._duration) if (tween.data === "isPause" && !tween.ratio && !(tween._startTime === 0 && self._rawPrevTime === 0)) {
+              pauseTween = tween;
+            }
+            tween = tween._next;
+          }
+        } else {
+          tween = self._last;
+
+          while (tween && tween._startTime >= time && !pauseTween) {
+            if (!tween._duration) if (tween.data === "isPause" && tween._rawPrevTime > 0) {
+              pauseTween = tween;
+            }
+            tween = tween._prev;
+          }
+        }
+
+        if (pauseTween) {
+          self._time = self._totalTime = time = pauseTween._startTime;
+          pauseTime = self._startTime + time / self._timeScale;
+        }
+      }
+
+>>>>>>> a2632ded49880d8e2a47865cdf6665e5a6b4e1e1
       self._totalTime = self._time = self._rawPrevTime = time;
     }
 
@@ -8706,8 +8797,13 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
 
 /*!
+<<<<<<< HEAD
  * VERSION: 2.1.3
  * DATE: 2019-05-17
+=======
+ * VERSION: 2.1.2
+ * DATE: 2019-03-01
+>>>>>>> a2632ded49880d8e2a47865cdf6665e5a6b4e1e1
  * UPDATES AND DOCS AT: http://greensock.com
  *
  * @license Copyright (c) 2008-2019, GreenSock. All rights reserved.
@@ -8738,7 +8834,11 @@ _TweenLite._gsScope._gsDefine("TimelineMax", ["TimelineLite", "TweenLite", "easi
 
   p.constructor = TimelineMax;
   p.kill()._gc = false;
+<<<<<<< HEAD
   TimelineMax.version = "2.1.3";
+=======
+  TimelineMax.version = "2.1.2";
+>>>>>>> a2632ded49880d8e2a47865cdf6665e5a6b4e1e1
 
   p.invalidate = function () {
     this._yoyo = !!this.vars.yoyo;
@@ -8974,6 +9074,7 @@ _TweenLite._gsScope._gsDefine("TimelineMax", ["TimelineLite", "TweenLite", "easi
           }
         }
       }
+<<<<<<< HEAD
     }
 
     if (self._hasPause && !self._forcingPlayhead && !suppressEvents) {
@@ -9005,6 +9106,39 @@ _TweenLite._gsScope._gsDefine("TimelineMax", ["TimelineLite", "TweenLite", "easi
         if (pauseTween._startTime < dur) {
           self._time = self._rawPrevTime = time = pauseTween._startTime;
           self._totalTime = time + self._cycle * (self._totalDuration + self._repeatDelay);
+=======
+
+      if (self._hasPause && !self._forcingPlayhead && !suppressEvents) {
+        time = self._time;
+
+        if (time >= prevTime || self._repeat && prevCycle !== self._cycle) {
+          tween = self._first;
+
+          while (tween && tween._startTime <= time && !pauseTween) {
+            if (!tween._duration) if (tween.data === "isPause" && !tween.ratio && !(tween._startTime === 0 && self._rawPrevTime === 0)) {
+              pauseTween = tween;
+            }
+            tween = tween._next;
+          }
+        } else {
+          tween = self._last;
+
+          while (tween && tween._startTime >= time && !pauseTween) {
+            if (!tween._duration) if (tween.data === "isPause" && tween._rawPrevTime > 0) {
+              pauseTween = tween;
+            }
+            tween = tween._prev;
+          }
+        }
+
+        if (pauseTween) {
+          pauseTime = self._startTime + pauseTween._startTime / self._timeScale;
+
+          if (pauseTween._startTime < dur) {
+            self._time = self._rawPrevTime = time = pauseTween._startTime;
+            self._totalTime = time + self._cycle * (self._totalDuration + self._repeatDelay);
+          }
+>>>>>>> a2632ded49880d8e2a47865cdf6665e5a6b4e1e1
         }
       }
     }
@@ -9355,8 +9489,13 @@ exports.default = exports.BezierPlugin = void 0;
 var _TweenLite = require("./TweenLite.js");
 
 /*!
+<<<<<<< HEAD
  * VERSION: 1.3.9
  * DATE: 2019-05-17
+=======
+ * VERSION: 1.3.8
+ * DATE: 2018-05-30
+>>>>>>> a2632ded49880d8e2a47865cdf6665e5a6b4e1e1
  * UPDATES AND DOCS AT: http://greensock.com
  *
  * @license Copyright (c) 2008-2019, GreenSock. All rights reserved.
@@ -9779,7 +9918,11 @@ var _RAD2DEG = 180 / Math.PI,
     BezierPlugin = _TweenLite._gsScope._gsDefine.plugin({
   propName: "bezier",
   priority: -1,
+<<<<<<< HEAD
   version: "1.3.9",
+=======
+  version: "1.3.8",
+>>>>>>> a2632ded49880d8e2a47865cdf6665e5a6b4e1e1
   API: 2,
   global: true,
   //gets called when the tween renders for the first time. This is where initial values should be recorded and any setup routines should run.
@@ -9882,8 +10025,12 @@ var _RAD2DEG = 180 / Math.PI,
         val,
         l,
         lengths,
+<<<<<<< HEAD
         curSeg,
         v1;
+=======
+        curSeg;
+>>>>>>> a2632ded49880d8e2a47865cdf6665e5a6b4e1e1
 
     if (!this._timeRes) {
       curIndex = v < 0 ? 0 : v >= 1 ? segments - 1 : segments * v >> 0;
@@ -9891,6 +10038,7 @@ var _RAD2DEG = 180 / Math.PI,
     } else {
       lengths = this._lengths;
       curSeg = this._curSeg;
+<<<<<<< HEAD
       v1 = v * this._length;
       i = this._li; //find the appropriate segment (if the currently cached one isn't correct)
 
@@ -9898,15 +10046,31 @@ var _RAD2DEG = 180 / Math.PI,
         l = segments - 1;
 
         while (i < l && (this._l2 = lengths[++i]) <= v1) {}
+=======
+      v *= this._length;
+      i = this._li; //find the appropriate segment (if the currently cached one isn't correct)
+
+      if (v > this._l2 && i < segments - 1) {
+        l = segments - 1;
+
+        while (i < l && (this._l2 = lengths[++i]) <= v) {}
+>>>>>>> a2632ded49880d8e2a47865cdf6665e5a6b4e1e1
 
         this._l1 = lengths[i - 1];
         this._li = i;
         this._curSeg = curSeg = this._segments[i];
         this._s2 = curSeg[this._s1 = this._si = 0];
+<<<<<<< HEAD
       } else if (v1 < this._l1 && i > 0) {
         while (i > 0 && (this._l1 = lengths[--i]) >= v1) {}
 
         if (i === 0 && v1 < this._l1) {
+=======
+      } else if (v < this._l1 && i > 0) {
+        while (i > 0 && (this._l1 = lengths[--i]) >= v) {}
+
+        if (i === 0 && v < this._l1) {
+>>>>>>> a2632ded49880d8e2a47865cdf6665e5a6b4e1e1
           this._l1 = 0;
         } else {
           i++;
@@ -9921,6 +10085,7 @@ var _RAD2DEG = 180 / Math.PI,
 
       curIndex = i; //now find the appropriate sub-segment (we split it into the number of pieces that was defined by "precision" and measured each one)
 
+<<<<<<< HEAD
       v1 -= this._l1;
       i = this._si;
 
@@ -9935,6 +10100,22 @@ var _RAD2DEG = 180 / Math.PI,
         while (i > 0 && (this._s1 = curSeg[--i]) >= v1) {}
 
         if (i === 0 && v1 < this._s1) {
+=======
+      v -= this._l1;
+      i = this._si;
+
+      if (v > this._s2 && i < curSeg.length - 1) {
+        l = curSeg.length - 1;
+
+        while (i < l && (this._s2 = curSeg[++i]) <= v) {}
+
+        this._s1 = curSeg[i - 1];
+        this._si = i;
+      } else if (v < this._s1 && i > 0) {
+        while (i > 0 && (this._s1 = curSeg[--i]) >= v) {}
+
+        if (i === 0 && v < this._s1) {
+>>>>>>> a2632ded49880d8e2a47865cdf6665e5a6b4e1e1
           this._s1 = 0;
         } else {
           i++;
@@ -9944,7 +10125,11 @@ var _RAD2DEG = 180 / Math.PI,
         this._si = i;
       }
 
+<<<<<<< HEAD
       t = v === 1 ? 1 : (i + (v1 - this._s1) / (this._s2 - this._s1)) * this._prec || 0;
+=======
+      t = (i + (v - this._s1) / (this._s2 - this._s1)) * this._prec || 0;
+>>>>>>> a2632ded49880d8e2a47865cdf6665e5a6b4e1e1
     }
 
     inv = 1 - t;
@@ -10824,6 +11009,60 @@ var wheel_5 = []; //init kalder på funktion wheelArrayMaker
 window.addEventListener("DOMContentLoaded", init);
 
 function init() {
+<<<<<<< HEAD
+=======
+  var rocket = document.querySelector("#loadingIcon");
+  var rocketBar = document.querySelector("#loadingBar");
+
+  _TweenMax.default.to(rocket, 3.5, {
+    x: "50vw"
+  });
+
+  _TweenMax.default.to(rocketBar, 3.5, {
+    width: "50vw",
+    onComplete: openGame
+  });
+}
+
+function openGame() {
+  document.querySelector("main").style.display = "block";
+  console.log("OPEN UP");
+  var topBar = document.querySelector("#topLoading");
+  var bottomBar = document.querySelector("#bottomLoading");
+  var rocket = document.querySelector("#loadingIcon");
+  var rocketBar = document.querySelector("#loadingBarFrame");
+  var icon = document.querySelector("#loadingSplash");
+  bottomBar.style.zIndex = "100";
+  topBar.style.zIndex = "100";
+  document.querySelector("#loadingScreen").style.zIndex = "1000";
+
+  _TweenMax.default.to(topBar, 1.5, {
+    y: "-100vw"
+  });
+
+  _TweenMax.default.to(icon, 1.5, {
+    y: "-100vw"
+  });
+
+  _TweenMax.default.to(rocketBar, 1.5, {
+    y: "100vw"
+  });
+
+  _TweenMax.default.to(rocket, 1.5, {
+    y: "100vw"
+  });
+
+  _TweenMax.default.to(bottomBar, 1.5, {
+    y: "100vw",
+    onComplete: start
+  });
+}
+
+function start() {
+  document.querySelector("#gevinstBorder").style.transform = "scale(1) translateY(0)";
+  document.querySelector("#loadingScreen").style.display = "none";
+  console.log("start");
+>>>>>>> a2632ded49880d8e2a47865cdf6665e5a6b4e1e1
   document.querySelector("#startSpil").addEventListener("click", function () {
     var satsInputValue = document.querySelector("#satsInput").value;
     sats = parseInt(satsInputValue, 10);
@@ -11424,17 +11663,24 @@ function modalPopUp() {
 
 function enLargeMyGevinst() {
   console.log("ENLARGE");
+<<<<<<< HEAD
   var gevinstTextBlock = document.querySelector("#gevinstBorder");
   /*  TweenMax.to(gevinstTextBlock, 0.8, {
     scale: 2,
     y: "-10vw",
     onComplete: minimize()
   }); */
+=======
+  var enlargeText = document.querySelector("#gevinstBorder");
+  enlargeText.style.transform = "scale(1.3) translateY(-10vw)";
+  setTimeout(minimize, 500);
+>>>>>>> a2632ded49880d8e2a47865cdf6665e5a6b4e1e1
 }
 
 function minimize() {
   console.log("minify");
   var gevinstTextBlock = document.querySelector("#gevinstBorder");
+<<<<<<< HEAD
 
   _TweenMax.default.to(gevinstTextBlock, 0.8, {
     scale: 1,
@@ -11442,6 +11688,11 @@ function minimize() {
   });
 }
 },{"gsap/TweenMax":"node_modules/gsap/TweenMax.js","gsap/TweenLite":"node_modules/gsap/TweenLite.js"}],"../../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+=======
+  gevinstTextBlock.style.transform = "scale(1) translateY(0vw)";
+}
+},{"gsap/TweenMax":"node_modules/gsap/TweenMax.js","gsap/TweenLite":"node_modules/gsap/TweenLite.js"}],"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+>>>>>>> a2632ded49880d8e2a47865cdf6665e5a6b4e1e1
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -11469,7 +11720,11 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
+<<<<<<< HEAD
   var ws = new WebSocket(protocol + '://' + hostname + ':' + "57436" + '/');
+=======
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51088" + '/');
+>>>>>>> a2632ded49880d8e2a47865cdf6665e5a6b4e1e1
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -11644,5 +11899,9 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
+<<<<<<< HEAD
 },{}]},{},["../../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","spil.js"], null)
+=======
+},{}]},{},["../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","spil.js"], null)
+>>>>>>> a2632ded49880d8e2a47865cdf6665e5a6b4e1e1
 //# sourceMappingURL=/spil.6d569108.js.map
