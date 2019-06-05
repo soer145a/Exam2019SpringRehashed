@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 {"id":"flyvendealien-01.svg","dependencies":[{"name":"C:\\Users\\Søren Rembøll\\Desktop\\Ny mappe\\Exam2019SpringRehashed\\Exam klister\\package.json","includedInParent":true,"mtime":1559655654435}],"generated":{"js":"module.exports = \"/0df533ba11ce031fe2a694b126d210b8.svg\";"},"sourceMaps":null,"error":null,"hash":"133f6206497a0f75531dd0161e198994","cacheData":{"env":{}}}
+=======
+{"id":"flyvendealien-01.svg","dependencies":[{"name":"C:\\Users\\Søren Rembøll\\Desktop\\Ny mappe\\Exam2019SpringRehashed\\Exam klister\\package.json","includedInParent":true,"mtime":1559657303488}],"generated":{"js":"module.exports = \"/0df533ba11ce031fe2a694b126d210b8.svg\";"},"sourceMaps":null,"error":null,"hash":"133f6206497a0f75531dd0161e198994","cacheData":{"env":{}}}
+>>>>>>> liste
