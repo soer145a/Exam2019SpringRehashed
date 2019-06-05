@@ -25,6 +25,53 @@ const wheel_5 = [];
 window.addEventListener("DOMContentLoaded", init);
 
 function init() {
+  let rocket = document.querySelector("#loadingIcon");
+  let rocketBar = document.querySelector("#loadingBar");
+
+  TweenMax.to(rocket, 3.5, {
+    x: "50vw"
+  });
+  TweenMax.to(rocketBar, 3.5, {
+    width: "50vw",
+    onComplete: openGame
+  });
+}
+function openGame() {
+  document.querySelector("main").style.display = "block";
+  console.log("OPEN UP");
+  let topBar = document.querySelector("#topLoading");
+  let bottomBar = document.querySelector("#bottomLoading");
+  let rocket = document.querySelector("#loadingIcon");
+  let rocketBar = document.querySelector("#loadingBarFrame");
+  let icon = document.querySelector("#loadingSplash");
+  bottomBar.style.zIndex = "100";
+  topBar.style.zIndex = "100";
+  document.querySelector("#loadingScreen").style.zIndex = "1000";
+
+  TweenMax.to(topBar, 1.5, {
+    y: "-100vw"
+  });
+  TweenMax.to(icon, 1.5, {
+    y: "-100vw"
+  });
+  TweenMax.to(rocketBar, 1.5, {
+    y: "100vw"
+  });
+  TweenMax.to(rocket, 1.5, {
+    y: "100vw"
+  });
+
+  TweenMax.to(bottomBar, 1.5, {
+    y: "100vw",
+    onComplete: start
+  });
+}
+
+function start() {
+  document.querySelector("#gevinstBorder").style.transform =
+    "scale(1) translateY(0)";
+  document.querySelector("#loadingScreen").style.display = "none";
+  console.log("start");
   document.querySelector("#startSpil").addEventListener("click", () => {
     let satsInputValue = document.querySelector("#satsInput").value;
     sats = parseInt(satsInputValue, 10);
@@ -714,18 +761,12 @@ function modalPopUp() {
 
 function enLargeMyGevinst() {
   console.log("ENLARGE");
-  let gevinstTextBlock = document.querySelector("#gevinstBorder");
-  /*  TweenMax.to(gevinstTextBlock, 0.8, {
-    scale: 2,
-    y: "-10vw",
-    onComplete: minimize()
-  }); */
+  let enlargeText = document.querySelector("#gevinstBorder");
+  enlargeText.style.transform = "scale(1.3) translateY(-10vw)";
+  setTimeout(minimize, 500);
 }
 function minimize() {
   console.log("minify");
   let gevinstTextBlock = document.querySelector("#gevinstBorder");
-  TweenMax.to(gevinstTextBlock, 0.8, {
-    scale: 1,
-    y: "10vw"
-  });
+  gevinstTextBlock.style.transform = "scale(1) translateY(0vw)";
 }
