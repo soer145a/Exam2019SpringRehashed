@@ -1,22 +1,18 @@
 $DisplayFont: "Audiowide", cursive;
 $TextFont: "Lato", sans-serif;
 $casinoFarve: #a88952;
-
 body {
   overflow-x: hidden;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 h1 {
   font-family: $DisplayFont;
 }
-
 p {
   font-family: $TextFont;
 }
-
 header {
   width: 100%;
   height: 50px;
@@ -25,12 +21,10 @@ header {
   grid-template-columns: 1fr 1fr 1fr;
   margin: 0 auto;
 }
-
 .dsLogoMobil img {
   width: 35px;
   padding: 7px 10px 10px 20px;
 }
-
 .dsLogoDesktop {
   display: none;
 }
@@ -38,7 +32,6 @@ header {
   width: 150px;
   padding: 10px;
 }
-
 .logInd {
   width: 80px;
   height: 50px;
@@ -48,36 +41,29 @@ header {
   font-family: $TextFont;
   font-size: 1.2em;
 }
-
 .logInd a {
   color: white;
   cursor: pointer;
   text-decoration: none;
   float: right;
 }
-
 .logInd a:hover {
   color: #544529;
 }
-
 .kampangeBillede {
   margin-bottom: 4vw;
   margin-top: -2px;
 }
-
 .baggrund {
   width: 100%;
 }
-
 .baggrund img {
   width: 100%;
   margin-top: -10px;
 }
-
 .baggrundUnivers img {
   width: 100%;
 }
-
 .alien {
   background-image: url(flyvendealien-01.svg);
   background-size: 100% 100%;
@@ -93,7 +79,6 @@ header {
   animation-fill-mode: forwards;
   animation-direction: alternate;
 }
-
 @keyframes alien {
   0% {
     transform: translateX(0vw) translateY(-5vh);
@@ -105,14 +90,12 @@ header {
     transform: translateX(55vw) translateY(4vh);
   }
 }
-
 .rumRejsenSkilt img {
   width: 37vw;
   position: absolute;
   left: 56vw;
   top: 18vw;
 }
-
 .spilNuKnap {
   background-image: url(spilknap-03.svg);
   background-size: 100% 100%;
@@ -126,7 +109,6 @@ header {
   animation-duration: 1s;
   animation-direction: alternate;
 }
-
 @keyframes scaleknap {
   0% {
     transform: scale(1);
@@ -138,17 +120,14 @@ header {
 .spilNuKnap:hover {
   cursor: pointer;
 }
-
 #containerIndhold {
   margin-top: -290px;
 }
-
 .textKampange {
   width: 90%;
   margin: 0 auto;
   margin-bottom: 8vw;
 }
-
 .ikoner {
   width: 90%;
   margin: 0 auto;
@@ -157,59 +136,48 @@ header {
   grid-gap: 28px;
   margin-bottom: 8vw;
 }
-
 .ikon {
   width: 40vw;
   margin: 0 auto;
 }
-
 #insertMoney img {
   width: 100%;
 }
-
 #spinIkon img {
   width: 100%;
 }
-
 #payoutIkon img {
   width: 100%;
 }
-
 .videoContainer {
   width: 90%;
   margin: 0 auto;
   border: 1px solid black;
   margin-bottom: 8vw;
 }
-
 .video {
   width: 100%;
   height: 250px;
   border: 1px solid blue;
 }
-
 footer {
   width: 100%;
   background-color: #a88952;
   padding-top: 2vw;
 }
-
 footer p {
   color: white;
   font-family: $TextFont;
 }
-
 footer a {
   color: white;
   font-family: $TextFont;
   cursor: pointer;
   text-decoration: none;
 }
-
 footer a:hover {
   color: #544529;
 }
-
 .textContainer {
   width: 90%;
   margin: 0 auto;
@@ -217,13 +185,11 @@ footer a:hover {
   grid-template-columns: 1fr 1fr;
   margin-top: 2vw;
 }
-
 .footerLogo {
   width: 180px;
   height: 35px;
   margin-left: 15px;
 }
-
 .text {
   width: 44vw;
   height: 150px;
@@ -232,17 +198,14 @@ footer a:hover {
   margin-top: 5vw;
   text-align: center;
 }
-
 .text p {
   margin-block-start: 0em;
 }
-
 .textAdresse {
   grid-column-start: 1;
   grid-column-end: 3;
   text-align: center;
 }
-
 .kontaktKundeservice {
   grid-row-start: 2;
   grid-column-start: 1;
@@ -253,7 +216,6 @@ footer a:hover {
   margin-block-start: 0px;
   margin-block-end: 10px;
 }
-
 .kundeserviceKnap {
   height: 40px;
   font-family: $TextFont;
@@ -265,11 +227,9 @@ footer a:hover {
   cursor: pointer;
   margin-bottom: 5px;
 }
-
 .kundeserviceKnap a {
   color: black;
 }
-
 #footerSponsor {
   background-color: white;
 }
@@ -279,80 +239,65 @@ footer a:hover {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
-
 .sponsor {
   width: 50px;
   height: 50px;
   margin: 0 auto;
   margin-top: 10px;
 }
-
 .sponsor img {
   width: 100%;
 }
-
 .stopSpillet {
   padding-top: 10px;
   width: 50px;
   height: 50px;
   margin: 0 auto;
 }
-
 .wlaLogo {
   width: 50px;
   height: 50px;
   margin: 0 auto;
   padding-top: 10px;
 }
-
 @media screen and (min-width: 627px) {
   .casinoLogo {
     text-align: center;
   }
-
   .logInd {
     width: 90%;
   }
-
   #containerIndhold {
     margin-top: -480px;
   }
-
   .alien {
     height: 25vh;
   }
-
   .rumRejsenSkilt {
     top: -5vw;
     position: absolute;
   }
-
   .ikoner {
     grid-template-columns: 1fr 1fr 1fr;
   }
-
   .ikon {
     width: 25vw;
   }
 }
-
 @media screen and (min-width: 768px) {
   .logoDesktop {
     width: 150px;
     padding: 10px 10px 10px 20px;
   }
-
   .dsLogoMobil {
     display: none;
   }
-
   .dsLogoDesktop {
     display: block;
   }
   .kampangeBillede {
     height: 975px;
   }
-
   #containerIndhold {
     margin-top: -600px;
   }
@@ -364,59 +309,48 @@ footer a:hover {
     width: 150px;
     height: 150px;
   }
-
   .ikoner {
     margin-bottom: 4vw;
   }
-
   .videoContainer {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
   }
-
   .textContainer {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 20px;
   }
-
   .text {
     width: 20vw;
     text-align: left;
     margin-top: 0vw;
   }
-
   .textAdresse {
     grid-column-start: 1;
     grid-column-end: 2;
     text-align: left;
   }
-
   .kontaktKundeservice {
     grid-column-start: 4;
     grid-column-end: 5;
     grid-row-start: 1;
     text-align: left;
   }
-
   .kundeserviceKnap {
     padding: 5px;
   }
-
   .footerLogo {
     margin-left: 0px;
   }
 }
-
 @media screen and (min-width: 1024px) {
   .kampangeBillede {
     height: 1290px;
   }
-
   #containerIndhold {
     margin-top: -750px;
   }
-
   .alien {
     height: 40vh;
     top: 10vw;
@@ -424,32 +358,54 @@ footer a:hover {
   .textKampange {
     width: 65%;
   }
-
   .textKampange p {
     width: 100%;
     font-size: 1em;
     line-height: 23px;
   }
-
   .ikoner {
     width: 65%;
     grid-gap: 25px;
   }
-
   .ikon {
     width: 18vw;
     height: 18vw;
   }
-
   .videoContainer {
     width: 65%;
   }
-
   .textContainer {
     width: 90%;
   }
-
   .sponsorbar {
     width: 60%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #containerIndhold {
+    margin-top: -660px;
+  }
+
+  footer {
+    position: relative;
+    z-index: 100;
+  }
+}
+
+@media screen and (min-width: 1536px) {
+  .logInd {
+    margin-left: 30px;
+  }
+
+  .rumRejsenSkilt img {
+    height: 350px;
+  }
+  #containerIndhold {
+    margin-top: -480px;
+  }
+
+  .baggrund {
+    width: 102%;
+    margin-left: -5px;
   }
 }

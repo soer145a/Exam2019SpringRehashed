@@ -45,7 +45,7 @@ function checkLoginStatus() {
   userArray.forEach(user => {
     if (formUserName == user.username) {
       if (user.password == formPassword) {
-        window.location.replace("http://localhost:1234/spil.html");
+        window.location.replace("spil.html");
       }
     }
   });

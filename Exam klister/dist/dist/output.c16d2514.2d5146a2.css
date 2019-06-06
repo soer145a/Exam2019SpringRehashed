@@ -1,0 +1,1265 @@
+.reset, body, #gevinst p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-y: hidden;
+  overflow-x: hidden;
+  background-color: none;
+}
+
+.pulsatingStartButton {
+  animation: pulsing 0.5s infinite alternate;
+}
+
+@keyframes pulsing {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+#modalInformation {
+  width: 60vw;
+  height: 10vw;
+  position: absolute;
+  left: 20vw;
+  top: 2vw;
+  color: white;
+}
+
+#modalInformation p {
+  text-align: center;
+  font-size: 2em;
+}
+
+#modalInformation h2 {
+  text-align: center;
+  font-size: 3em;
+}
+
+#modalForCasino {
+  width: 100vw;
+  position: absolute;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+  z-index: 100000;
+}
+
+#modalForCasino h2 {
+  color: white;
+  position: relative;
+  text-align: center;
+  top: 26vh;
+  font-size: 2.5em;
+  font-family: "Oswald", sans-serif;
+}
+
+#modalForCasino p {
+  color: white;
+  position: relative;
+  text-align: center;
+  top: 25vh;
+  font-size: 3em;
+  font-family: "Oswald", sans-serif;
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+}
+
+#modalForCasino p:hover {
+  transform: scale(1.1);
+  color: #ffd32a;
+}
+
+#modalForCasino img {
+  text-align: center;
+  color: white;
+  position: relative;
+  text-align: center;
+  top: 25vh;
+}
+
+@media screen and (min-width: 627px) {
+  main {
+    display: none;
+  }
+  .pulsatingStartButton {
+    animation: pulsing 0.5s infinite alternate;
+  }
+  @keyframes pulsing {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.1);
+    }
+  }
+  #loadingScreen {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 0;
+  }
+  #loadingScreen #loadingSplash {
+    position: absolute;
+    top: 5vw;
+    left: 25vw;
+    z-index: 11;
+  }
+  #loadingScreen #loadingSplash img {
+    width: 50vw;
+  }
+  #loadingScreen #loadingAssets {
+    position: absolute;
+    top: 40%;
+    left: 15%;
+    width: 70%;
+    height: 60%;
+    z-index: 4;
+  }
+  #loadingScreen #loadingAssets #loadingIcon {
+    position: absolute;
+    bottom: 0.8vw;
+    left: 3.5vw;
+    z-index: 1;
+  }
+  #loadingScreen #loadingAssets #loadingIcon img {
+    width: 20vw;
+    height: 20vw;
+  }
+  #loadingScreen #loadingAssets #loadingBarFrame {
+    border-radius: 4vw;
+    margin-top: 25vw;
+    margin-left: 10vw;
+    width: 50vw;
+    height: 4vw;
+    border: solid black 2px;
+  }
+  #loadingScreen #loadingAssets #loadingBarFrame #loadingBar {
+    border-radius: 4vw;
+    background: #ffd32a;
+    background: -moz-linear-gradient(45deg, #ffd32a 0%, #ff5c3c 100%);
+    background: -webkit-linear-gradient(45deg, #ffd32a 0%, #ff5c3c 100%);
+    background: linear-gradient(45deg, #ffd32a 0%, #ff5c3c 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd32a', endColorstr='#ff5c3c',GradientType=1 );
+    width: 0vw;
+    height: 4vw;
+  }
+  #loadingScreen #topLoading {
+    background-color: #0c2461;
+    width: 100%;
+    height: 50vw;
+    position: absolute;
+    z-index: 1;
+  }
+  #loadingScreen #bottomLoading {
+    background-color: #0c2461;
+    width: 100%;
+    height: 50vw;
+    position: absolute;
+    z-index: 1;
+  }
+}
+
+@media screen and (min-width: 1919px) {
+  main {
+    display: none;
+  }
+  #loadingScreen {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 0;
+  }
+  #loadingScreen #loadingSplash {
+    position: absolute;
+    top: 5vw;
+    left: 35vw;
+    z-index: 11;
+  }
+  #loadingScreen #loadingSplash img {
+    width: 40vw;
+  }
+  #loadingScreen #loadingAssets {
+    position: absolute;
+    top: 40%;
+    left: 15%;
+    width: 70%;
+    height: 60%;
+    z-index: 4;
+  }
+  #loadingScreen #loadingAssets #loadingIcon {
+    position: absolute;
+    bottom: 0.8vw;
+    left: 3.5vw;
+    z-index: 1;
+  }
+  #loadingScreen #loadingAssets #loadingIcon img {
+    width: 20vw;
+    height: 20vw;
+  }
+  #loadingScreen #loadingAssets #loadingBarFrame {
+    border-radius: 4vw;
+    margin-top: 19vw;
+    margin-left: 10vw;
+    width: 50vw;
+    height: 4vw;
+    border: solid black 2px;
+  }
+  #loadingScreen #loadingAssets #loadingBarFrame #loadingBar {
+    border-radius: 4vw;
+    background: #ffd32a;
+    background: -moz-linear-gradient(45deg, #ffd32a 0%, #ff5c3c 100%);
+    background: -webkit-linear-gradient(45deg, #ffd32a 0%, #ff5c3c 100%);
+    background: linear-gradient(45deg, #ffd32a 0%, #ff5c3c 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd32a', endColorstr='#ff5c3c',GradientType=1 );
+    width: 0vw;
+    height: 4vw;
+  }
+  #loadingScreen #topLoading {
+    background-color: #0c2461;
+    width: 100%;
+    height: 50vw;
+    position: absolute;
+    z-index: 1;
+  }
+  #loadingScreen #bottomLoading {
+    background-color: #0c2461;
+    width: 100%;
+    height: 50vw;
+    position: absolute;
+    z-index: 1;
+  }
+}
+
+#baggrund {
+  transform: scale(1.2);
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+}
+
+#baggrund img {
+  z-index: 0;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+}
+
+#frame {
+  width: 51vw;
+  height: 62vh;
+  position: absolute;
+  top: 9vw;
+  left: 25vw;
+  z-index: 1;
+  background-color: black;
+  opacity: 0.7;
+}
+
+#baggrundFrame {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0vw;
+  left: 0;
+  z-index: 3;
+}
+
+#baggrundFrame img {
+  width: 97vw;
+  height: 100vh;
+  z-index: 4;
+  transform: scale(1.1);
+}
+
+#spilOverlay {
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  transform: scale(0.65);
+  z-index: 4;
+}
+
+#startSpil {
+  position: absolute;
+  left: 45.5vw;
+  bottom: -0.5vw;
+  z-index: 4;
+  transform: scale(0.8);
+}
+
+#startSpil img {
+  width: 80%;
+}
+
+#autoPlay {
+  position: absolute;
+  bottom: 0.5vw;
+  cursor: pointer;
+  right: 34vw;
+  z-index: 10;
+}
+
+#autoPlaytext {
+  position: absolute;
+  color: white;
+  bottom: 1.5vw;
+  right: 36.3vw;
+  z-index: 10;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.8em;
+  pointer-events: none;
+}
+
+#startSpil img {
+  cursor: pointer;
+  margin-left: 1vw;
+}
+
+#satsLabel {
+  color: white;
+  font-family: "Oswald", sans-serif;
+  position: absolute;
+  bottom: 1vw;
+  left: 32vw;
+  z-index: 10;
+}
+
+#satsLabel h2 {
+  position: absolute;
+  top: -0.5vw;
+  left: 2.7vw;
+}
+
+#satsLabel input {
+  top: 3vw;
+  font-family: "Oswald", sans-serif;
+  padding-left: 1vw;
+  left: 4vw;
+  border: 1px solid white;
+  border-radius: 5px;
+  position: absolute;
+  width: 2.5vw;
+  transform: scale(1.1);
+}
+
+#saldoFelt {
+  font-family: "Oswald", sans-serif;
+  color: white;
+  position: absolute;
+  bottom: 1vw;
+  left: 16vw;
+  z-index: 10;
+}
+
+#saldoFelt h2 {
+  position: absolute;
+  bottom: 1.8vw;
+  left: 2.4vw;
+}
+
+#saldoFelt #saldoText {
+  position: absolute;
+  top: 2vw;
+  left: 2.4vw;
+}
+
+#gevinstBorder {
+  font-family: "Oswald", sans-serif;
+  position: absolute;
+  width: 11vw;
+  height: 2vw;
+  bottom: 5.5vw;
+  right: 20vw;
+  z-index: 10;
+  transition: 0.5s;
+}
+
+#gevinst p {
+  color: white;
+  margin-left: 2.6vw;
+  margin-top: 0.6vw;
+  margin-bottom: 0.7vw;
+  transform: translate(2.5vw, -6.3vw) scale(1.5);
+  z-index: 11;
+}
+
+#wheelArea {
+  z-index: 2;
+  width: 70vw;
+  height: 70vh;
+  transform: scale(0.745);
+  position: absolute;
+  top: 4vw;
+  left: 15vw;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 0.4vw;
+}
+
+#wheelArea .wheel {
+  z-index: 3;
+  display: grid;
+  grid-gap: 1.1vw;
+  grid-template-columns: 1fr;
+}
+
+#wheelArea .wheel .displayCaseDiv {
+  width: 100%;
+  height: 13vw;
+  z-index: 2;
+}
+
+#logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+#logo img {
+  width: 70%;
+  transform: rotate(-20deg);
+}
+
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 100;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.7);
+  /* Black w/ opacity */
+}
+
+.modal .container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 3vw;
+  margin: 4vw;
+}
+
+.modal .container img {
+  width: 15vw;
+  animation: puls 0.5s infinite alternate;
+}
+
+@keyframes puls {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+/* Modal Content/Box */
+.modal-content {
+  margin: 15% auto;
+  /* 15% from the top and centered */
+  width: 80%;
+  /* Could be more or less, depending on screen size */
+}
+
+.dot {
+  background-color: #00c2cc;
+  border-radius: 50%;
+  position: absolute;
+}
+
+#myBtn {
+  position: absolute;
+  z-index: 10;
+}
+
+.text {
+  transform: translateY(4vw);
+  width: 10vw;
+  height: 3vw;
+}
+
+.text .victoryText {
+  text-align: center;
+  margin-top: 3vw;
+}
+
+.text #modalGevinst2,
+.text #modalGevinst1,
+.text #modalGevinst3 {
+  text-align: center;
+  margin-top: 0vw;
+  font-size: 2em;
+}
+
+.storGevinst {
+  color: white;
+  font-family: "Oswald", sans-serif;
+  font-size: 2em;
+}
+
+.mellemGevinst {
+  color: white;
+  font-family: "Oswald", sans-serif;
+  font-size: 1em;
+}
+
+.lilleGevinst {
+  color: white;
+  font-family: "Oswald", sans-serif;
+  font-size: 1em;
+}
+
+.nitte {
+  color: white;
+  font-family: "Oswald", sans-serif;
+  font-size: 2em;
+  margin-top: -10vh;
+  margin-left: 2vw;
+}
+
+@media only screen and (min-width: 667px) and (max-width: 667px) {
+  body {
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
+  #modalInformation {
+    width: 60vw;
+    height: 10vw;
+    position: absolute;
+    left: 20vw;
+    top: 2vw;
+    color: white;
+  }
+  #modalInformation p {
+    text-align: center;
+    font-size: 1.5em;
+  }
+  #modalInformation h2 {
+    text-align: center;
+    font-size: 2em;
+  }
+  #logo {
+    position: absolute;
+    top: 0;
+    left: 40vw;
+    z-index: 20;
+  }
+  #logo img {
+    width: 30%;
+  }
+  #baggrund {
+    transform: scale(1.2);
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+  }
+  #baggrund img {
+    z-index: 0;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+  }
+  #frame {
+    width: 50vw;
+    height: 58vh;
+    position: absolute;
+    top: 11vw;
+    left: 25vw;
+    z-index: 1;
+    background-color: black;
+    opacity: 0.7;
+  }
+  #baggrundFrame {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0vw;
+    left: 0;
+    z-index: 3;
+  }
+  #baggrundFrame img {
+    width: 100vw;
+    height: 100vh;
+    z-index: 4;
+    transform: scale(1);
+  }
+  #spilOverlay {
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    transform: scale(0.56);
+    z-index: 4;
+  }
+  #startSpil {
+    position: absolute;
+    left: 50vw;
+    bottom: 1vw;
+    z-index: 4;
+    transform: scale(1);
+  }
+  #startSpil img {
+    width: 40%;
+  }
+  #autoPlay {
+    position: absolute;
+    bottom: -3vw;
+    right: 25vw;
+    z-index: 10;
+    transform: scale(0.3);
+  }
+  #autoPlaytext {
+    position: absolute;
+    color: white;
+    bottom: 3.5vw;
+    right: 32.7vw;
+    z-index: 110;
+    font-family: "Oswald", sans-serif;
+    font-size: 0.7em;
+    pointer-events: none;
+  }
+  #wheelArea {
+    z-index: 2;
+    width: 70vw;
+    height: 75vh;
+    transform: scale(0.745);
+    position: absolute;
+    top: 7vw;
+    left: 15vw;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 0.4vw;
+  }
+  #wheelArea .wheel {
+    z-index: 3;
+    display: grid;
+    grid-gap: 1.4vw;
+    grid-template-columns: 1fr;
+  }
+  #wheelArea .wheel .displayCaseDiv {
+    width: 100%;
+    height: 13vw;
+    z-index: 2;
+  }
+  #gevinstBorder {
+    position: absolute;
+    width: 10vw;
+    transform: scale(0.5);
+    height: 2vw;
+    bottom: 9vw;
+    right: 20vw;
+    z-index: 10;
+    transition: 0.5s;
+  }
+  #gevinst p {
+    color: white;
+    margin: 1vw;
+    transform: translate(3vw, -13vw) scale(1);
+    bottom: 0vw;
+    right: 5vw;
+    z-index: 11;
+  }
+  .gevinstSvg {
+    width: 16vw;
+    position: absolute;
+    bottom: -5.5vh;
+  }
+  #satsLabel {
+    color: white;
+    position: absolute;
+    bottom: -1.5vw;
+    left: 27vw;
+    z-index: 10;
+    transform: scale(0.5);
+  }
+  #satsLabel h2 {
+    position: absolute;
+    top: 0vw;
+    left: 8vw;
+  }
+  #satsLabel input {
+    top: 8vw;
+    left: 14vw;
+    position: absolute;
+    width: 5vw;
+    transform: scale(1.1);
+  }
+  #saldoFelt {
+    color: white;
+    position: absolute;
+    bottom: -1.5vw;
+    left: 10vw;
+    z-index: 10;
+    transform: scale(0.5);
+  }
+  #saldoFelt h2 {
+    position: absolute;
+    top: 0vw;
+    left: 6vw;
+  }
+  #saldoFelt #saldoText {
+    position: absolute;
+    top: 6vw;
+    left: 9vw;
+  }
+}
+
+@media screen and (min-width: 1680px) and (max-width: 1680px) {
+  body {
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
+  #baggrund {
+    transform: scale(1.2);
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+  }
+  #baggrund img {
+    z-index: 0;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+  }
+  #frame {
+    width: 50vw;
+    height: 58vh;
+    position: absolute;
+    top: 11vw;
+    left: 25vw;
+    z-index: 1;
+    background-color: black;
+    opacity: 0.7;
+  }
+  #baggrundFrame {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0vw;
+    left: 0;
+    z-index: 3;
+  }
+  #baggrundFrame img {
+    width: 100vw;
+    height: 100vh;
+    z-index: 4;
+    transform: scale(1);
+  }
+  #spilOverlay {
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    transform: scale(0.59);
+    z-index: 4;
+  }
+  #startSpil {
+    position: absolute;
+    left: 45vw;
+    bottom: 0vw;
+    z-index: 4;
+    transform: scale(0.6);
+  }
+  #autoPlay {
+    position: absolute;
+    bottom: 1.5vw;
+    right: 38vw;
+    z-index: 10;
+    transform: scale(0.7);
+  }
+  #autoPlaytext {
+    position: absolute;
+    color: white;
+    bottom: 3.5vw;
+    right: 40.6vw;
+    z-index: 110;
+    font-family: "Oswald", sans-serif;
+    font-size: 1.2em;
+    pointer-events: none;
+  }
+  #wheelArea {
+    z-index: 2;
+    width: 65vw;
+    height: 75vh;
+    transform: scale(0.745);
+    position: absolute;
+    top: 6vw;
+    left: 17.5vw;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 0.4vw;
+  }
+  #wheelArea .wheel {
+    z-index: 3;
+    display: grid;
+    grid-gap: 1vw;
+    grid-template-columns: 1fr;
+  }
+  #wheelArea .wheel .displayCaseDiv {
+    width: 100%;
+    height: 13vw;
+    z-index: 2;
+  }
+  #gevinstBorder {
+    position: absolute;
+    width: 10vw;
+    transform: scale(0.8);
+    height: 2vw;
+    bottom: 5.5vw;
+    right: 27vw;
+    z-index: 10;
+    transition: 0.5s;
+  }
+  #gevinst p {
+    color: white;
+    margin: 1vw;
+    transform: translate(1vw, -6.5vw) scale(1);
+    bottom: 0vw;
+    right: 5vw;
+    z-index: 11;
+  }
+  .gevinstSvg {
+    width: 16vw;
+    position: absolute;
+    bottom: 0vh;
+    transform: scale(0.8);
+  }
+  #satsLabel {
+    color: white;
+    position: absolute;
+    bottom: 2vw;
+    left: 30vw;
+    z-index: 10;
+    transform: scale(0.8);
+  }
+  #satsLabel h2 {
+    position: absolute;
+    top: -0.5vw;
+    left: 3.2vw;
+  }
+  #satsLabel input {
+    top: 3vw;
+    font-family: "Oswald", sans-serif;
+    padding-left: 1vw;
+    left: 4vw;
+    border: 1px solid white;
+    border-radius: 5px;
+    position: absolute;
+    width: 2.5vw;
+    transform: scale(1.1);
+  }
+  #saldoFelt {
+    color: white;
+    position: absolute;
+    bottom: 2vw;
+    left: 18vw;
+    z-index: 10;
+    transform: scale(0.8);
+  }
+  #saldoFelt h2 {
+    position: absolute;
+    top: 0vw;
+    left: 3vw;
+  }
+  #saldoFelt #saldoText {
+    position: absolute;
+    top: 2vw;
+    left: 3.5vw;
+    font-size: 1.3em;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0c2461;
+}
+
+#formContainer {
+  width: 80%;
+  margin: 0 auto;
+  background-color: white;
+  margin-top: 90px;
+  box-shadow: 0px 0px 45px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 7.5px;
+}
+
+/* 
+#formLogin {
+  display: block;
+  width: 60%;
+  height: 400px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 30px;
+
+} */
+#formLogin {
+  height: 400px;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+  grid-template-rows: 1fr 1fr;
+}
+
+#loginInfo {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+#loginButtons {
+  grid-row-start: 2;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  margin-top: 0px;
+}
+
+.cls-6,
+.cls-8 {
+  font-family: Audiowide-Regular, Audiowide;
+}
+
+label p {
+  text-align: left;
+  margin-left: 10px;
+  font-size: 15px;
+  margin-block-end: 0em;
+  font-family: "Lato", sans-serif;
+}
+
+input {
+  border: none;
+  border-bottom: 1px solid black;
+  outline: none;
+}
+
+#formLoginButton {
+  margin: 10px;
+  margin-top: 15px;
+  width: 161px;
+  border: none;
+  padding: 5px;
+  font-family: "Lato", sans-serif;
+}
+
+#formUser {
+  font-family: "Lato", sans-serif;
+}
+
+#formUser p {
+  margin-block-end: 0em;
+}
+
+#formUserButton {
+  margin: 10px;
+  width: 161px;
+  border: none;
+  padding: 5px;
+  font-family: "Lato", sans-serif;
+}
+
+#formContainer #formUserBlock {
+  display: none;
+}
+
+#formUserBlock {
+  width: 80%;
+  height: 400px;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  box-shadow: 0px 0px 45px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 7.5px;
+  background-color: white;
+  animation-name: slideIn;
+  position: absolute;
+  animation-timing-function: ease-out;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  z-index: 2;
+}
+
+#formUserBlock label p {
+  margin-left: 0;
+  padding-left: 20px;
+}
+
+#formUserBlock input {
+  margin-left: 20px;
+  width: 70%;
+}
+
+.nextStep {
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+#formUserBlockFormButton {
+  width: 158px;
+  border: none;
+  padding: 5px;
+  font-family: "Lato", sans-serif;
+}
+
+#formContainer #formUserInfo {
+  height: 400px;
+  display: none;
+  width: 80%;
+}
+
+#formUserInfo {
+  height: 400px;
+  display: none;
+  width: 80%;
+}
+
+#nemID {
+  display: none;
+}
+
+#formUserInfo {
+  padding-top: 10px;
+  padding-bottom: 30px;
+  box-shadow: 0px 0px 45px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 7.5px;
+  background-color: white;
+  animation-name: slideIn;
+  position: absolute;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  z-index: 2;
+}
+
+#formUserInfo label p {
+  margin-left: 0;
+  padding-left: 20px;
+}
+
+#formUserInfo input {
+  margin-left: 20px;
+  width: 70%;
+}
+
+#formUserInfoButton {
+  width: 158px;
+  border: none;
+  padding: 5px;
+  font-family: "Lato", sans-serif;
+}
+
+#nemID {
+  padding: 10px;
+  height: 420px;
+  width: 75%;
+  box-shadow: 0px 0px 45px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 7.5px;
+  background-color: white;
+  animation-name: slideIn;
+  position: absolute;
+  animation-timing-function: ease-out;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  z-index: 2;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-400px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translate(0px);
+  }
+}
+
+#nemID p {
+  margin-left: 10px;
+  font-family: "Lato", sans-serif;
+}
+
+.nemIdPlaceholder {
+  width: 180px;
+  height: 200px;
+  background-color: lightgray;
+  margin: 10px;
+}
+
+.opretBruger {
+  width: 158px;
+  border: none;
+  padding: 5px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  font-family: "Lato", sans-serif;
+  margin-left: 10px;
+}
+
+.opretBruger a {
+  color: black;
+  text-decoration: none;
+  font-family: "Lato", sans-serif;
+}
+
+@media screen and (min-width: 627px) {
+  #formContainer {
+    margin-top: 12px;
+    height: 350px;
+    background-color: transparent;
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+  }
+  #formLogin {
+    background-color: white;
+    width: 100%;
+    height: 310px;
+    border-radius: 7.5px;
+    box-shadow: 0px 0px 45px 0px rgba(0, 0, 0, 0.75);
+  }
+  #formLogin {
+    grid-template-columns: 32% 36% 32%;
+  }
+  #formUserBlock {
+    height: 310px;
+  }
+  #formContainer #formUserInfo {
+    height: 310px;
+  }
+  #formUserBlock input {
+    width: 60%;
+  }
+  #formUserInfo input {
+    width: 60%;
+  }
+  #nemID {
+    height: 330px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #formLogin {
+    margin-top: 200px;
+  }
+  #formLogin {
+    grid-template-columns: 36% 28% 36%;
+  }
+  #formUserBlock input {
+    width: 50%;
+  }
+  #formUserInfo input {
+    width: 50%;
+  }
+  #formContainer {
+    margin-top: 100px;
+    height: 450px;
+  }
+  #formUserBlock {
+    margin-top: 100px;
+    height: 310px;
+  }
+  #formUserInfo {
+    margin-top: 100px;
+    height: 310px;
+  }
+  #nemID {
+    margin-top: 100px;
+    height: 330px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #formContainer {
+    width: 70%;
+  }
+  #formLogin {
+    grid-template-columns: 38% 24% 38%;
+  }
+  #formUserBlock {
+    width: 70%;
+  }
+  #formContainer #formUserInfo {
+    display: none;
+    width: 70%;
+  }
+  #nemID {
+    width: 68%;
+  }
+  #formLoginButton {
+    margin: 0px;
+    margin-top: 15px;
+  }
+  #formUserButton {
+    margin: 0px;
+    margin-top: 10px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #formContainer {
+    width: 60%;
+  }
+  #formUserBlock {
+    width: 60%;
+  }
+  #formContainer #formUserInfo {
+    display: none;
+    width: 60%;
+  }
+  #nemID {
+    width: 58%;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  #formContainer {
+    width: 50%;
+  }
+  #formUserBlock {
+    width: 50%;
+  }
+  #formContainer #formUserInfo {
+    display: none;
+    width: 50%;
+  }
+  #nemID {
+    width: 48%;
+  }
+}
+
+
+
+
+/*# sourceMappingURL=/output.c16d2514.2d5146a2.css.map */

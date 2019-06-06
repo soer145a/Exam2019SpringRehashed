@@ -67,8 +67,9 @@ header {
 }
 
 .baggrund img {
-  width: 100%;
+  width: 102%;
   margin-top: -10px;
+  margin-left: -5px;
 }
 
 .baggrundUnivers img {
@@ -272,7 +273,7 @@ footer a:hover {
 }
 
 #footerSponsor {
-  background-color: white;
+  background-color: rgb(216, 216, 180);
 }
 
 .sponsorbar {
@@ -287,6 +288,7 @@ footer a:hover {
   height: 50px;
   margin: 0 auto;
   margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .sponsor img {
@@ -346,6 +348,11 @@ footer a:hover {
   .kampangeBillede {
     height: 975px;
   }
+
+  .baggrund img {
+    width: 101%;
+    margin-left: -2px;
+  }
   #containerIndhold {
     margin-top: -600px;
   }
@@ -397,6 +404,10 @@ footer a:hover {
   .kampangeBillede {
     height: 1290px;
   }
+
+  .baggrund img {
+    width: 100.7%;
+  }
   #containerIndhold {
     margin-top: -400px;
   }
@@ -446,5 +457,23 @@ footer a:hover {
   .spilNuKnap {
     top: 35vw;
     left: 46vw;
+  }
+}
+
+@media screen and (min-width: 1536px) {
+  .logInd {
+    margin-left: 30px;
+  }
+
+  .rumRejsenSkilt img {
+    height: 350px;
+  }
+  #containerIndhold {
+    margin-top: -480px;
+  }
+
+  .baggrund {
+    width: 102%;
+    margin-left: -5px;
   }
 }
