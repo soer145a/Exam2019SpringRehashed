@@ -184,12 +184,12 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":"../../../.npm-global/lib/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"output.css":[function(require,module,exports) {
+},{"./bundle-url":"../../../.npm-global/lib/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"index.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"../../../.npm-global/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../.npm-global/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./flyvendealien-01.svg":[["flyvendealien-01.26d210b8.svg","flyvendealien-01.svg"],"flyvendealien-01.svg"],"./spilknap-03.svg":[["spilknap-03.e3a217e4.svg","spilknap-03.svg"],"spilknap-03.svg"],"_css_loader":"../../../.npm-global/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../.npm-global/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -217,7 +217,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49836" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49721" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -393,4 +393,4 @@ function hmrAcceptRun(bundle, id) {
   }
 }
 },{}]},{},["../../../.npm-global/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js"], null)
-//# sourceMappingURL=/output.c16d2514.js.map
+//# sourceMappingURL=/Exam%20klister.9ad09f98.js.map
