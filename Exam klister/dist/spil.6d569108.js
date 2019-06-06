@@ -129,8 +129,8 @@ exports.EventDispatcher = exports.TweenPlugin = exports.Power4 = exports.Power3 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 /*!
- * VERSION: 2.1.2
- * DATE: 2019-03-01
+ * VERSION: 2.1.3
+ * DATE: 2019-05-17
  * UPDATES AND DOCS AT: http://greensock.com
  *
  * @license Copyright (c) 2008-2019, GreenSock. All rights reserved.
@@ -1304,7 +1304,7 @@ var TweenLite = function (window) {
   p.ratio = 0;
   p._firstPT = p._targets = p._overwrittenProps = p._startAt = null;
   p._notifyPluginsOfEnabled = p._lazy = false;
-  TweenLite.version = "2.1.2";
+  TweenLite.version = "2.1.3";
   TweenLite.defaultEase = p._ease = new Ease(null, null, 1, 1);
   TweenLite.defaultOverwrite = "auto";
   TweenLite.ticker = _ticker;
@@ -10780,8 +10780,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
 
 /*!
- * VERSION: 2.1.2
- * DATE: 2019-03-01
+ * VERSION: 2.1.3
+ * DATE: 2019-05-17
  * UPDATES AND DOCS AT: http://greensock.com
  *
  * @license Copyright (c) 2008-2019, GreenSock. All rights reserved.
@@ -11443,7 +11443,7 @@ function calcMinigameVictory(planet) {
     setTimeout(function () {
       enLargeMyGevinst();
       modal.style.display = "none"; //efter tre sekunder, lukker modalet
-    }, 30000000);
+    }, 3000);
   } //hvis tallet er større end 10 og mindre end 25, får man en mellem gevinst
 
 
@@ -11457,7 +11457,7 @@ function calcMinigameVictory(planet) {
     setTimeout(function () {
       enLargeMyGevinst();
       modal.style.display = "none";
-    }, 300000);
+    }, 3000);
   } //hvis tallet er større end 25, og mindre en 55, så får man en lille gevinst
 
 
@@ -11471,7 +11471,7 @@ function calcMinigameVictory(planet) {
     setTimeout(function () {
       modal.style.display = "none";
       enLargeMyGevinst();
-    }, 3000000);
+    }, 3000);
   } //hvis tallet er højere end 55 og mindre end 100, vinder man ingenting (lidt mindre end 50% change for at tabe)
 
 
@@ -11481,7 +11481,7 @@ function calcMinigameVictory(planet) {
     modalGevinstText.textContent = "";
     setTimeout(function () {
       modal.style.display = "none";
-    }, 3000000);
+    }, 3000);
   }
 }
 
@@ -11544,7 +11544,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56030" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55665" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
