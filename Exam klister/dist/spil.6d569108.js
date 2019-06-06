@@ -11471,6 +11471,8 @@ function enLargeMyGevinst() {
   console.log("ENLARGE");
   var enlargeText = document.querySelector("#gevinstBorder");
   enlargeText.style.transform = "scale(1.3) translateY(-10vw)";
+  enlargeText.style.transformOrigin = "50% 50%"; //enlargeText.style.transformBox = "fill-box";
+
   setTimeout(minimize, 500);
 }
 
@@ -11507,7 +11509,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58860" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59245" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

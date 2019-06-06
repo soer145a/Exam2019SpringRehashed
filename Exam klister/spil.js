@@ -769,6 +769,8 @@ function enLargeMyGevinst() {
   console.log("ENLARGE");
   let enlargeText = document.querySelector("#gevinstBorder");
   enlargeText.style.transform = "scale(1.3) translateY(-10vw)";
+  enlargeText.style.transformOrigin = "50% 50%";
+  //enlargeText.style.transformBox = "fill-box";
   setTimeout(minimize, 500);
 }
 function minimize() {
