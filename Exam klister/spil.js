@@ -69,8 +69,6 @@ function openGame() {
 }
 
 function start() {
-  document.querySelector("#gevinstBorder").style.transform =
-    "scale(1) translateY(0)";
   document.querySelector("#startSpil").classList.add("pulsatingStartButton");
   document.querySelector("#loadingScreen").style.display = "none";
   console.log("start");

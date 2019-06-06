@@ -70,14 +70,26 @@ body {
     color: white;
     position: relative;
     text-align: center;
-    top: -24vh;
-    left: 38vw;
+    top: 25vh;
   }
 }
 
 @media screen and (min-width: 627px) {
   main {
     display: none;
+  }
+
+  .pulsatingStartButton {
+    animation: pulsing 0.5s infinite alternate;
+  }
+  @keyframes pulsing {
+    from {
+      transform: scale(0.35);
+    }
+
+    to {
+      transform: scale(0.3);
+    }
   }
 
   #loadingScreen {
@@ -298,22 +310,25 @@ body {
   bottom: -0.5vw;
 
   z-index: 4;
-  transform: scale(0.9);
+  transform: scale(0.8);
+  img {
+    width: 80%;
+  }
 }
 #autoPlay {
   position: absolute;
-  bottom: 1vw;
+  bottom: 0.5vw;
   cursor: pointer;
 
-  right: 37vw;
+  right: 34vw;
   z-index: 10;
 }
 #autoPlaytext {
   position: absolute;
   color: white;
-  bottom: 1.8vw;
+  bottom: 1.5vw;
 
-  right: 38.65vw;
+  right: 36.3vw;
   z-index: 10;
   font-family: $DisplayFont;
   font-size: 1.8em;
@@ -329,7 +344,7 @@ body {
   color: white;
   font-family: $DisplayFont;
   position: absolute;
-  bottom: 2vw;
+  bottom: 1vw;
   left: 32vw;
   z-index: 10;
   h2 {
@@ -353,9 +368,9 @@ body {
   font-family: $DisplayFont;
   color: white;
   position: absolute;
-  bottom: 2vw;
+  bottom: 1vw;
 
-  left: 20vw;
+  left: 16vw;
   z-index: 10;
   h2 {
     position: absolute;
@@ -375,7 +390,7 @@ body {
   width: 11vw;
   height: 2vw;
   bottom: 5.5vw;
-  right: 22vw;
+  right: 20vw;
   z-index: 10;
   transition: 0.5s;
 }
@@ -384,8 +399,8 @@ body {
   @extend .reset;
   margin-left: 2.6vw;
   margin-top: 0.6vw;
-  margin-bottom: 0.6vw;
-  transform: translate(3vw, -5.3vw) scale(1.5);
+  margin-bottom: 0.7vw;
+  transform: translate(2.5vw, -6.3vw) scale(1.5);
 
   z-index: 11;
 }
@@ -506,131 +521,7 @@ body {
   margin-top: -10vh;
   margin-left: 2vw;
 }
-@media only screen and (min-width: 1200px) and (max-width: 1920) {
-  body {
-    overflow-y: hidden;
-    overflow-x: hidden;
-  }
-  #baggrund {
-    transform: scale(1.2);
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    img {
-      z-index: 0;
-      position: absolute;
-      width: 100vw;
-      height: 100vh;
-    }
-  }
-  #frame {
-    width: 50vw;
-    height: 58vh;
-    position: absolute;
-    top: 11vw;
-    left: 25vw;
-    z-index: 1;
-    background-color: black;
-    opacity: 0.7;
-  }
-  #baggrundFrame {
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    top: 0vw;
-    left: 0;
-    z-index: 3;
 
-    img {
-      width: 100vw;
-
-      height: 100vh;
-      z-index: 4;
-      transform: scale(1);
-    }
-  }
-  #spilOverlay {
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    transform: scale(0.6);
-    z-index: 4;
-  }
-
-  #startSpil {
-    position: absolute;
-
-    left: 45.5vw;
-    bottom: 0.1vw;
-
-    z-index: 4;
-    transform: scale(0.8);
-  }
-  #autoPlay {
-    position: absolute;
-    bottom: 1.8vw;
-
-    right: 35vw;
-    z-index: 10;
-  }
-  #autoPlaytext {
-    position: absolute;
-    color: white;
-    bottom: 2.8vw;
-
-    right: 37vw;
-    z-index: 110;
-    font-family: $DisplayFont;
-    font-size: 1.8em;
-    pointer-events: none;
-  }
-
-  #wheelArea {
-    z-index: 2;
-    width: 70vw;
-    height: 70vh;
-    transform: scale(0.745);
-    position: absolute;
-    top: 6vw;
-    left: 15vw;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-gap: 0.4vw;
-
-    .wheel {
-      z-index: 3;
-      display: grid;
-      grid-gap: 1.1vw;
-      grid-template-columns: 1fr;
-
-      .displayCaseDiv {
-        width: 100%;
-        height: 13vw;
-        z-index: 2;
-      }
-    }
-  }
-
-  #gevinstBorder {
-    position: absolute;
-    width: 11vw;
-    height: 2vw;
-    bottom: 6vw;
-    right: 20vw;
-    z-index: 10;
-    transition: 0.5s;
-  }
-  #gevinst p {
-    color: white;
-    margin: 1vw;
-    transform: translate(3vw, -5.3vw) scale(1.5);
-
-    font-family: sans-serif;
-
-    z-index: 11;
-  }
-}
 @media only screen and (min-width: 667px) and (max-width: 667px) {
   body {
     overflow-y: hidden;
@@ -687,7 +578,7 @@ body {
     position: absolute;
 
     left: 44vw;
-    bottom: -7vw;
+    bottom: -5vw;
 
     z-index: 4;
     transform: scale(0.3);
@@ -743,7 +634,7 @@ body {
     width: 10vw;
     transform: scale(0.5);
     height: 2vw;
-    bottom: 2vw;
+    bottom: 9vw;
     right: 20vw;
     z-index: 10;
     transition: 0.5s;
@@ -751,7 +642,7 @@ body {
   #gevinst p {
     color: white;
     margin: 1vw;
-    transform: translate(3vw, -6.5vw) scale(1);
+    transform: translate(3vw, -13vw) scale(1);
     bottom: 0vw;
     right: 5vw;
 

@@ -10864,7 +10864,6 @@ function openGame() {
 }
 
 function start() {
-  document.querySelector("#gevinstBorder").style.transform = "scale(1) translateY(0)";
   document.querySelector("#startSpil").classList.add("pulsatingStartButton");
   document.querySelector("#loadingScreen").style.display = "none";
   console.log("start");
@@ -11518,7 +11517,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62380" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62387" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
