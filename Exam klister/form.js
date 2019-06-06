@@ -76,16 +76,20 @@ function displayFirstForm() {
 }
 function saveFirstSetOfData(obj) {
   console.log("SAVE FIRST SET OF DATA");
+
   let usernameForm = document.querySelector("#userName");
+  let userPassword = document.querySelector("#userPassword");
+  let userPasswordTwo = document.querySelector("#userPasswordConfirm");
+  let emailFormen = document.querySelector("#userEmail");
+
   let userCounter = 0;
   userArray.forEach(user => {
     console.log(user.username, usernameForm.value);
     if (user.username == usernameForm.value) {
-      alert("OPTAGET BRUGERNAVN");
+      usernameForm.style.backgroundColor = "red";
     } else {
       console.log(usernameForm.checkValidity());
       if (usernameForm.checkValidity() != true) {
-        alert("Indtast gyldigt brugernavn");
       } else {
         obj.username = usernameForm.value;
 
@@ -95,16 +99,16 @@ function saveFirstSetOfData(obj) {
         ) {
           obj.password = document.querySelector("#userPassword").value;
           if (user.email == obj.email) {
-            alert("OPTAGET EMAIL");
+            emailFormen.style.backgroundColor = "red";
           } else {
-            let emailForm = document.querySelector("#userEmail");
-            if (emailForm.checkValidity() != true) {
-              alert("Indtast gyldig email");
+            if (emailFormen.checkValidity() != true) {
+              console.log(emailFormen.checkValidity());
+
+              emailFormen.style.backgroundColor = "red";
             } else {
-              obj.email = emailForm.value;
+              obj.email = emailFormen.value;
 
               if (obj.telefoneNr == user.telefoneNr) {
-                alert("OPTAGET TELEFONNR");
               } else {
                 obj.telefoneNr = document.querySelector("#userTlf").value;
                 userCounter++;
@@ -115,7 +119,8 @@ function saveFirstSetOfData(obj) {
             }
           }
         } else {
-          alert("Password1 og password 2 er ikke ens");
+          userPassword.style.backgroundColor = "red";
+          userPasswordTwo.style.backgroundColor = "red";
         }
       }
     }
@@ -124,7 +129,6 @@ function saveFirstSetOfData(obj) {
     console.log("CORRECT");
     displaySecondForm(obj);
   } else {
-    alert("Something Was Wrong");
   }
 }
 function displaySecondForm(obj) {
@@ -145,7 +149,6 @@ function saveSecondSetOfData(obj) {
   let userCounter = 0;
   userArray.forEach(user => {
     if (user.CPRnr == obj.CPRnr) {
-      alert("Dette CPR nummer brugt før");
     } else {
       obj.CPRnr = document.querySelector("#userCpr").value;
       userCounter++;
@@ -155,7 +158,6 @@ function saveSecondSetOfData(obj) {
     console.log("CORRECT");
     sendInfoToRest(obj);
   } else {
-    alert("Something Was Wrong");
   }
 }
 

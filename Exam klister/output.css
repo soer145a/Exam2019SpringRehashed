@@ -9,6 +9,19 @@ body {
   background-color: none;
 }
 
+.pulsatingStartButton {
+  animation: pulsing 0.5s infinite alternate;
+}
+
+@keyframes pulsing {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
 @media screen and (min-width: 627px) {
   main {
     display: none;
@@ -216,23 +229,30 @@ body {
 #autoPlay {
   position: absolute;
   bottom: 1vw;
-  right: 38vw;
+  cursor: pointer;
+  right: 37vw;
   z-index: 10;
 }
 
 #autoPlaytext {
   position: absolute;
   color: white;
-  bottom: 2vw;
-  right: 39.7vw;
+  bottom: 1.8vw;
+  right: 38.65vw;
   z-index: 10;
   font-family: "Oswald", sans-serif;
   font-size: 1.8em;
   pointer-events: none;
 }
 
+#startSpil img {
+  cursor: pointer;
+  margin-left: 1vw;
+}
+
 #satsLabel {
   color: white;
+  font-family: "Oswald", sans-serif;
   position: absolute;
   bottom: 2vw;
   left: 32vw;
@@ -241,51 +261,59 @@ body {
 
 #satsLabel h2 {
   position: absolute;
-  top: 0vw;
-  left: 1vw;
+  top: -0.5vw;
+  left: 2.7vw;
 }
 
 #satsLabel input {
   top: 3vw;
-  left: 1vw;
+  font-family: "Oswald", sans-serif;
+  padding-left: 1vw;
+  left: 4vw;
+  border: 1px solid white;
+  border-radius: 5px;
   position: absolute;
-  width: 5vw;
+  width: 2.5vw;
   transform: scale(1.1);
 }
 
 #saldoFelt {
+  font-family: "Oswald", sans-serif;
   color: white;
   position: absolute;
   bottom: 2vw;
-  left: 18vw;
+  left: 20vw;
   z-index: 10;
 }
 
 #saldoFelt h2 {
   position: absolute;
-  top: 0vw;
-  left: 1vw;
+  bottom: 1.8vw;
+  left: 2.4vw;
 }
 
 #saldoFelt #saldoText {
   position: absolute;
   top: 2vw;
-  left: 1vw;
+  left: 2.4vw;
 }
 
 #gevinstBorder {
+  font-family: "Oswald", sans-serif;
   position: absolute;
   width: 11vw;
   height: 2vw;
-  bottom: 5vw;
-  right: 20vw;
+  bottom: 5.5vw;
+  right: 22vw;
   z-index: 10;
   transition: 0.5s;
 }
 
 #gevinst p {
   color: white;
-  margin: 1vw;
+  margin-left: 2.6vw;
+  margin-top: 0.6vw;
+  margin-bottom: 0.6vw;
   transform: translate(3vw, -5.3vw) scale(1.5);
   z-index: 11;
 }
@@ -397,23 +425,29 @@ body {
 }
 
 .storGevinst {
-  background-color: #f9a602;
-  color: black;
+  color: white;
+  font-family: "Oswald", sans-serif;
+  font-size: 2em;
 }
 
 .mellemGevinst {
-  background-color: #c0c0c0;
-  color: black;
+  color: white;
+  font-family: "Oswald", sans-serif;
+  font-size: 1em;
 }
 
 .lilleGevinst {
-  background-color: #cd7f32;
-  color: black;
+  color: white;
+  font-family: "Oswald", sans-serif;
+  font-size: 1em;
 }
 
 .nitte {
-  color: black;
-  background-color: white;
+  color: white;
+  font-family: "Oswald", sans-serif;
+  font-size: 2em;
+  margin-top: -10vh;
+  margin-left: 2vw;
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1920) {
@@ -524,6 +558,7 @@ body {
     color: white;
     margin: 1vw;
     transform: translate(3vw, -5.3vw) scale(1.5);
+    font-family: sans-serif;
     z-index: 11;
   }
 }
@@ -574,6 +609,11 @@ body {
   grid-column-start: 2;
   grid-column-end: 3;
   margin-top: 0px;
+}
+
+.cls-6,
+.cls-8 {
+  font-family: Audiowide-Regular, Audiowide;
 }
 
 label p {

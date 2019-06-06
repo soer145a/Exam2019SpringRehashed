@@ -10865,9 +10865,11 @@ function openGame() {
 
 function start() {
   document.querySelector("#gevinstBorder").style.transform = "scale(1) translateY(0)";
+  document.querySelector("#startSpil").classList.add("pulsatingStartButton");
   document.querySelector("#loadingScreen").style.display = "none";
   console.log("start");
   document.querySelector("#startSpil").addEventListener("click", function () {
+    document.querySelector("#startSpil").classList.remove("pulsatingStartButton");
     var satsInputValue = document.querySelector("#satsInput").value;
     sats = parseInt(satsInputValue, 10);
     saldo = saldo - sats;
@@ -11505,7 +11507,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64059" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57858" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

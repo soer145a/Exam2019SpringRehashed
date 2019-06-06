@@ -39,6 +39,7 @@ function init() {
 function openGame() {
   document.querySelector("main").style.display = "block";
   console.log("OPEN UP");
+
   let topBar = document.querySelector("#topLoading");
   let bottomBar = document.querySelector("#bottomLoading");
   let rocket = document.querySelector("#loadingIcon");
@@ -70,9 +71,14 @@ function openGame() {
 function start() {
   document.querySelector("#gevinstBorder").style.transform =
     "scale(1) translateY(0)";
+  document.querySelector("#startSpil").classList.add("pulsatingStartButton");
   document.querySelector("#loadingScreen").style.display = "none";
   console.log("start");
   document.querySelector("#startSpil").addEventListener("click", () => {
+    document
+      .querySelector("#startSpil")
+      .classList.remove("pulsatingStartButton");
+
     let satsInputValue = document.querySelector("#satsInput").value;
     sats = parseInt(satsInputValue, 10);
     saldo = saldo - sats;

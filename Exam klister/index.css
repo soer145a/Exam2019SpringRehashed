@@ -117,7 +117,7 @@ header {
   height: 10vh;
   position: absolute;
   top: 40vw;
-  left: 58vw;
+  left: 48vw;
   animation-name: scaleknap;
   animation-iteration-count: infinite;
   animation-duration: 1s;
@@ -133,16 +133,18 @@ header {
   }
 }
 
-.spilNuKnap:hover {
+.spilNuKnap {
   cursor: pointer;
 }
 
 #containerIndhold {
-  margin-top: -290px;
+  margin-top: -370px;
 }
 
 .textKampange {
   width: 90%;
+  color: white;
+
   margin: 0 auto;
   margin-bottom: 8vw;
 }
@@ -176,8 +178,7 @@ header {
 .videoContainer {
   width: 90%;
   margin: 0 auto;
-  border: 1px solid black;
-  margin-bottom: 8vw;
+  margin-bottom: 10vw;
 }
 
 .video {
@@ -210,6 +211,7 @@ footer a:hover {
 
 .textContainer {
   width: 90%;
+  color: white;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -396,27 +398,40 @@ footer a:hover {
     height: 1290px;
   }
   #containerIndhold {
-    margin-top: -780px;
+    margin-top: -400px;
   }
   .alien {
     height: 40vh;
     top: 10vw;
   }
   .textKampange {
-    width: 65%;
+    width: 63vw;
+    font-size: 1.9em;
+    color: white;
   }
+
+  .videoText {
+    margin-bottom: 8vh;
+  }
+
   .textKampange p {
     width: 100%;
     font-size: 1em;
-    line-height: 23px;
+    line-height: 60px;
   }
+
   .ikoner {
     width: 65%;
     grid-gap: 25px;
+    margin-top: 300px;
   }
   .ikon {
     width: 18vw;
     height: 18vw;
+  }
+
+  .videoText p {
+    font-size: 1.2em;
   }
   .videoContainer {
     width: 65%;
@@ -426,5 +441,10 @@ footer a:hover {
   }
   .sponsorbar {
     width: 60%;
+  }
+
+  .spilNuKnap {
+    top: 35vw;
+    left: 46vw;
   }
 }
