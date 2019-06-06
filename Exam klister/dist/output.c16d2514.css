@@ -5,8 +5,6 @@
 
 body {
   overflow-y: hidden;
-<<<<<<< HEAD
-=======
   overflow-x: hidden;
   background-color: none;
 }
@@ -155,7 +153,6 @@ body {
     position: absolute;
     z-index: 1;
   }
->>>>>>> a2632ded49880d8e2a47865cdf6665e5a6b4e1e1
 }
 
 #baggrund {
@@ -219,27 +216,30 @@ body {
 #autoPlay {
   position: absolute;
   bottom: 1vw;
-  right: 38vw;
+  cursor: pointer;
+  right: 37vw;
   z-index: 10;
 }
 
 #autoPlaytext {
   position: absolute;
   color: white;
-  bottom: 2vw;
-  right: 39.7vw;
-<<<<<<< HEAD
-  z-index: 110;
-=======
+  bottom: 1.8vw;
+  right: 38.65vw;
   z-index: 10;
->>>>>>> a2632ded49880d8e2a47865cdf6665e5a6b4e1e1
   font-family: "Oswald", sans-serif;
   font-size: 1.8em;
   pointer-events: none;
 }
 
+#startSpil img {
+  cursor: pointer;
+  margin-left: 1vw;
+}
+
 #satsLabel {
   color: white;
+  font-family: "Oswald", sans-serif;
   position: absolute;
   bottom: 2vw;
   left: 32vw;
@@ -248,54 +248,59 @@ body {
 
 #satsLabel h2 {
   position: absolute;
-  top: 0vw;
-  left: 1vw;
+  top: -0.5vw;
+  left: 2.7vw;
 }
 
 #satsLabel input {
   top: 3vw;
-  left: 1vw;
+  font-family: "Oswald", sans-serif;
+  padding-left: 1vw;
+  left: 4vw;
+  border: 1px solid white;
+  border-radius: 5px;
   position: absolute;
-  width: 5vw;
+  width: 2.5vw;
   transform: scale(1.1);
 }
 
 #saldoFelt {
+  font-family: "Oswald", sans-serif;
   color: white;
   position: absolute;
   bottom: 2vw;
-  left: 18vw;
+  left: 20vw;
   z-index: 10;
 }
 
 #saldoFelt h2 {
   position: absolute;
-  top: 0vw;
-  left: 1vw;
+  bottom: 1.8vw;
+  left: 2.4vw;
 }
 
 #saldoFelt #saldoText {
   position: absolute;
   top: 2vw;
-  left: 1vw;
+  left: 2.4vw;
 }
 
 #gevinstBorder {
+  font-family: "Oswald", sans-serif;
   position: absolute;
   width: 11vw;
   height: 2vw;
-  bottom: 5vw;
-  right: 20vw;
+  bottom: 5.5vw;
+  right: 22vw;
   z-index: 10;
-<<<<<<< HEAD
-=======
   transition: 0.5s;
->>>>>>> a2632ded49880d8e2a47865cdf6665e5a6b4e1e1
 }
 
 #gevinst p {
   color: white;
-  margin: 1vw;
+  margin-left: 2.6vw;
+  margin-top: 0.6vw;
+  margin-bottom: 0.6vw;
   transform: translate(3vw, -5.3vw) scale(1.5);
   z-index: 11;
 }
@@ -407,27 +412,31 @@ body {
 }
 
 .storGevinst {
-  background-color: #f9a602;
-  color: black;
+  color: white;
+  font-family: "Oswald", sans-serif;
+  font-size: 2em;
 }
 
 .mellemGevinst {
-  background-color: #c0c0c0;
-  color: black;
+  color: white;
+  font-family: "Oswald", sans-serif;
+  font-size: 1em;
 }
 
 .lilleGevinst {
-  background-color: #cd7f32;
-  color: black;
+  color: white;
+  font-family: "Oswald", sans-serif;
+  font-size: 1em;
 }
 
 .nitte {
-  color: black;
-  background-color: white;
+  color: white;
+  font-family: "Oswald", sans-serif;
+  font-size: 2em;
+  margin-top: -10vh;
+  margin-left: 2vw;
 }
 
-<<<<<<< HEAD
-=======
 @media only screen and (min-width: 1200px) and (max-width: 1920) {
   body {
     overflow-y: hidden;
@@ -536,11 +545,11 @@ body {
     color: white;
     margin: 1vw;
     transform: translate(3vw, -5.3vw) scale(1.5);
+    font-family: sans-serif;
     z-index: 11;
   }
 }
 
->>>>>>> a2632ded49880d8e2a47865cdf6665e5a6b4e1e1
 body {
   margin: 0;
   padding: 0;
@@ -587,6 +596,11 @@ body {
   grid-column-start: 2;
   grid-column-end: 3;
   margin-top: 0px;
+}
+
+.cls-6,
+.cls-8 {
+  font-family: Audiowide-Regular, Audiowide;
 }
 
 label p {
@@ -899,439 +913,5 @@ input {
   }
 }
 
-<<<<<<< HEAD
-body {
-  overflow-x: hidden;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-h1 {
-  font-family: "Audiowide", cursive;
-}
-
-p {
-  font-family: "Lato", sans-serif;
-}
-
-header {
-  width: 100%;
-  height: 50px;
-  background-color: #a88952;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  margin: 0 auto;
-}
-
-.dsLogoMobil img {
-  width: 35px;
-  padding: 7px 10px 10px 20px;
-}
-
-.dsLogoDesktop {
-  display: none;
-}
-
-.casinoLogo img {
-  width: 150px;
-  padding: 10px;
-}
-
-.logInd {
-  width: 80px;
-  height: 50px;
-  background-color: transparent;
-  border: none;
-  margin-left: 20px;
-  font-family: "Lato", sans-serif;
-  font-size: 1.2em;
-}
-
-.logInd a {
-  color: white;
-  cursor: pointer;
-  text-decoration: none;
-  float: right;
-}
-
-.logInd a:hover {
-  color: #544529;
-}
-
-.kampangeBillede {
-  margin-bottom: 4vw;
-  margin-top: -2px;
-}
-
-.baggrund {
-  width: 100%;
-}
-
-.baggrund img {
-  width: 100%;
-  margin-top: -10px;
-}
-
-.baggrundUnivers img {
-  width: 100%;
-}
-
-.alien {
-  background-image: url(/flyvendealien-01.26d210b8.svg);
-  background-size: 100% 100%;
-  width: 50vw;
-  height: 15vh;
-  position: absolute;
-  top: 5.5vh;
-  left: -55vw;
-  animation-name: alien;
-  animation-duration: 2s;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-out;
-  animation-fill-mode: forwards;
-  animation-direction: alternate;
-}
-
-@keyframes alien {
-  0% {
-    transform: translateX(0vw) translateY(-5vh);
-  }
-  50% {
-    transform: translateY(2vh) translateX(12.3vw);
-  }
-  100% {
-    transform: translateX(55vw) translateY(4vh);
-  }
-}
-
-.rumRejsenSkilt img {
-  width: 37vw;
-  position: absolute;
-  left: 56vw;
-  top: 18vw;
-}
-
-.spilNuKnap {
-  background-image: url(/spilknap-03.e3a217e4.svg);
-  background-size: 100% 100%;
-  width: 27vw;
-  height: 10vh;
-  position: absolute;
-  top: 40vw;
-  left: 58vw;
-  animation-name: scaleknap;
-  animation-iteration-count: infinite;
-  animation-duration: 1s;
-  animation-direction: alternate;
-}
-
-@keyframes scaleknap {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(1.1);
-  }
-}
-
-.spilNuKnap:hover {
-  cursor: pointer;
-}
-
-#containerIndhold {
-  margin-top: -290px;
-}
-
-.textKampange {
-  width: 90%;
-  margin: 0 auto;
-  margin-bottom: 8vw;
-}
-
-.ikoner {
-  width: 90%;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 28px;
-  margin-bottom: 8vw;
-}
-
-.ikon {
-  width: 40vw;
-  margin: 0 auto;
-}
-
-#insertMoney img {
-  width: 100%;
-}
-
-#spinIkon img {
-  width: 100%;
-}
-
-#payoutIkon img {
-  width: 100%;
-}
-
-.videoContainer {
-  width: 90%;
-  margin: 0 auto;
-  border: 1px solid black;
-  margin-bottom: 8vw;
-}
-
-.video {
-  width: 100%;
-  height: 250px;
-  border: 1px solid blue;
-}
-
-footer {
-  width: 100%;
-  background-color: #a88952;
-  padding-top: 2vw;
-}
-
-footer p {
-  color: white;
-  font-family: "Lato", sans-serif;
-}
-
-footer a {
-  color: white;
-  font-family: "Lato", sans-serif;
-  cursor: pointer;
-  text-decoration: none;
-}
-
-footer a:hover {
-  color: #544529;
-}
-
-.textContainer {
-  width: 90%;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin-top: 2vw;
-}
-
-.footerLogo {
-  width: 180px;
-  height: 35px;
-  margin-left: 15px;
-}
-
-.text {
-  width: 44vw;
-  height: 150px;
-  display: grid;
-  margin-bottom: 3vw;
-  margin-top: 5vw;
-  text-align: center;
-}
-
-.text p {
-  margin-block-start: 0em;
-}
-
-.textAdresse {
-  grid-column-start: 1;
-  grid-column-end: 3;
-  text-align: center;
-}
-
-.kontaktKundeservice {
-  grid-row-start: 2;
-  grid-column-start: 1;
-  grid-column-end: 3;
-  text-align: center;
-}
-
-.kontaktKundeservice p {
-  margin-block-start: 0px;
-  margin-block-end: 10px;
-}
-
-.kundeserviceKnap {
-  height: 40px;
-  font-family: "Lato", sans-serif;
-  font-weight: 800;
-  background-color: white;
-  border: none;
-  padding: 10px;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-bottom: 5px;
-}
-
-.kundeserviceKnap a {
-  color: black;
-}
-
-#footerSponsor {
-  background-color: white;
-}
-
-.sponsorbar {
-  width: 90%;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-}
-
-.sponsor {
-  width: 50px;
-  height: 50px;
-  margin: 0 auto;
-  margin-top: 10px;
-}
-
-.sponsor img {
-  width: 100%;
-}
-
-.stopSpillet {
-  padding-top: 10px;
-  width: 50px;
-  height: 50px;
-  margin: 0 auto;
-}
-
-.wlaLogo {
-  width: 50px;
-  height: 50px;
-  margin: 0 auto;
-  padding-top: 10px;
-}
-
-@media screen and (min-width: 627px) {
-  .casinoLogo {
-    text-align: center;
-  }
-  .logInd {
-    width: 90%;
-  }
-  #containerIndhold {
-    margin-top: -480px;
-  }
-  .alien {
-    height: 25vh;
-  }
-  .rumRejsenSkilt {
-    top: -5vw;
-    position: absolute;
-  }
-  .ikoner {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-  .ikon {
-    width: 25vw;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .logoDesktop {
-    width: 150px;
-    padding: 10px 10px 10px 20px;
-  }
-  .dsLogoMobil {
-    display: none;
-  }
-  .dsLogoDesktop {
-    display: block;
-  }
-  .kampangeBillede {
-    height: 975px;
-  }
-  #containerIndhold {
-    margin-top: -600px;
-  }
-  .alien {
-    height: 30vh;
-    top: 10vw;
-  }
-  .ikon {
-    width: 150px;
-    height: 150px;
-  }
-  .ikoner {
-    margin-bottom: 4vw;
-  }
-  .videoContainer {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
-  }
-  .textContainer {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 20px;
-  }
-  .text {
-    width: 20vw;
-    text-align: left;
-    margin-top: 0vw;
-  }
-  .textAdresse {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    text-align: left;
-  }
-  .kontaktKundeservice {
-    grid-column-start: 4;
-    grid-column-end: 5;
-    grid-row-start: 1;
-    text-align: left;
-  }
-  .kundeserviceKnap {
-    padding: 5px;
-  }
-  .footerLogo {
-    margin-left: 0px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .kampangeBillede {
-    height: 1290px;
-  }
-  #containerIndhold {
-    margin-top: -780px;
-  }
-  .alien {
-    height: 40vh;
-    top: 10vw;
-  }
-  .textKampange {
-    width: 65%;
-  }
-  .textKampange p {
-    width: 100%;
-    font-size: 1em;
-    line-height: 23px;
-  }
-  .ikoner {
-    width: 65%;
-    grid-gap: 25px;
-  }
-  .ikon {
-    width: 18vw;
-    height: 18vw;
-  }
-  .videoContainer {
-    width: 65%;
-  }
-  .textContainer {
-    width: 90%;
-  }
-  .sponsorbar {
-    width: 60%;
-  }
-}
-
-=======
->>>>>>> a2632ded49880d8e2a47865cdf6665e5a6b4e1e1
 
 /*# sourceMappingURL=/output.c16d2514.css.map */

@@ -2830,11 +2830,7 @@ _TweenLite._gsScope._gsDefine("TweenMax", ["core.Animation", "core.SimpleTimelin
 
         distances.max = max - min;
         distances.min = min;
-<<<<<<< HEAD
         distances.v = l = vars.amount || vars.each * (wrap > l ? l - 1 : !axis ? Math.max(wrap, l / wrap) : axis === "y" ? l / wrap : wrap) || 0;
-=======
-        distances.v = l = vars.amount || vars.each * (wrap > l ? l : !axis ? Math.max(wrap, l / wrap) : axis === "y" ? l / wrap : wrap) || 0;
->>>>>>> a2632ded49880d8e2a47865cdf6665e5a6b4e1e1
         distances.b = l < 0 ? base - l : base;
       }
 
@@ -2864,11 +2860,7 @@ _TweenLite._gsScope._gsDefine("TweenMax", ["core.Animation", "core.SimpleTimelin
       p = TweenMax.prototype = _TweenLite.default.to({}, 0.1, {}),
       _blankArray = [];
 
-<<<<<<< HEAD
   TweenMax.version = "2.1.3";
-=======
-  TweenMax.version = "2.1.2";
->>>>>>> a2632ded49880d8e2a47865cdf6665e5a6b4e1e1
   p.constructor = TweenMax;
   p.kill()._gc = false;
   TweenMax.killTweensOf = TweenMax.killDelayedCallsTo = _TweenLite.default.killTweensOf;
@@ -3496,11 +3488,7 @@ _TweenLite._gsScope._gsDefine("TweenMax", ["core.Animation", "core.SimpleTimelin
 
 
   p.progress = function (value, suppressEvents) {
-<<<<<<< HEAD
     return !arguments.length ? this.duration() ? this._time / this._duration : this.ratio : this.totalTime(this.duration() * (this._yoyo && (this._cycle & 1) !== 0 ? 1 - value : value) + this._cycle * (this._duration + this._repeatDelay), suppressEvents);
-=======
-    return !arguments.length ? this._time / this.duration() : this.totalTime(this.duration() * (this._yoyo && (this._cycle & 1) !== 0 ? 1 - value : value) + this._cycle * (this._duration + this._repeatDelay), suppressEvents);
->>>>>>> a2632ded49880d8e2a47865cdf6665e5a6b4e1e1
   };
 
   p.totalProgress = function (value, suppressEvents) {
@@ -3618,11 +3606,7 @@ _TweenLite._gsScope._gsDefine("plugins.CSSPlugin", ["plugins.TweenPlugin", "Twee
       p = CSSPlugin.prototype = new _TweenLite.TweenPlugin("css");
 
   p.constructor = CSSPlugin;
-<<<<<<< HEAD
   CSSPlugin.version = "2.1.3";
-=======
-  CSSPlugin.version = "2.1.0";
->>>>>>> a2632ded49880d8e2a47865cdf6665e5a6b4e1e1
   CSSPlugin.API = 2;
   CSSPlugin.defaultTransformPerspective = 0;
   CSSPlugin.defaultSkewType = "compensated";
@@ -3647,11 +3631,8 @@ _TweenLite._gsScope._gsDefine("plugins.CSSPlugin", ["plugins.TweenPlugin", "Twee
       _relNumExp = /(?:\d|\-\d|\.\d|\-\.\d|\+=\d|\-=\d|\+=.\d|\-=\.\d)+/g,
       _valuesExp = /(?:\+=|\-=|\-|\b)[\d\-\.]+[a-zA-Z0-9]*(?:%|\b)/gi,
       //finds all the values that begin with numbers or += or -= and then a number. Includes suffixes. We use this to split complex values apart like "1px 5px 20px rgb(255,102,51)"
-<<<<<<< HEAD
   _valuesExpWithCommas = /(?:\+=|\-=|\-|\b)[\d\-\.]+[a-zA-Z0-9]*(?:%|\b),?/gi,
       //finds all the values that begin with numbers or += or -= and then a number. Includes suffixes. We use this to split complex values apart like "1px 5px 20px rgb(255,102,51)"
-=======
->>>>>>> a2632ded49880d8e2a47865cdf6665e5a6b4e1e1
   _NaNExp = /(?![+-]?\d*\.?\d+|[+-]|e[+-]\d+)[^0-9]/g,
       //also allows scientific notation and doesn't kill the leading -/+ in -= and +=
   _suffixExp = /(?:\d|\-|\+|=|#|\.)*/g,
@@ -3685,12 +3666,8 @@ _TweenLite._gsScope._gsDefine("plugins.CSSPlugin", ["plugins.TweenPlugin", "Twee
     }
   },
       _createElement = function _createElement(type, ns) {
-<<<<<<< HEAD
     var e = _doc.createElementNS ? _doc.createElementNS(ns || "http://www.w3.org/1999/xhtml", type) : _doc.createElement(type);
     return e.style ? e : _doc.createElement(type); //some environments won't allow access to the element's style when created with a namespace in which case we default to the standard createElement() to work around the issue. Also note that when GSAP is embedded directly inside an SVG file, createElement() won't allow access to the style object in Firefox (see https://greensock.com/forums/topic/20215-problem-using-tweenmax-in-standalone-self-containing-svg-file-err-cannot-set-property-csstext-of-undefined/).
-=======
-    return ns && _doc.createElementNS ? _doc.createElementNS(ns, type) : _doc.createElement(type);
->>>>>>> a2632ded49880d8e2a47865cdf6665e5a6b4e1e1
   },
       _tempDiv = _createElement("div"),
       _tempImg = _createElement("img"),
@@ -4425,11 +4402,7 @@ _TweenLite._gsScope._gsDefine("plugins.CSSPlugin", ["plugins.TweenPlugin", "Twee
         return a.join(",");
       }
 
-<<<<<<< HEAD
       vals = v.match(delim === "," ? _valuesExp : _valuesExpWithCommas) || [];
-=======
-      vals = v.match(_valuesExp) || [];
->>>>>>> a2632ded49880d8e2a47865cdf6665e5a6b4e1e1
       i = vals.length;
 
       if (numVals > i--) {
@@ -4438,11 +4411,7 @@ _TweenLite._gsScope._gsDefine("plugins.CSSPlugin", ["plugins.TweenPlugin", "Twee
         }
       }
 
-<<<<<<< HEAD
       return (pfx && v !== "none" ? v.substr(0, v.indexOf(vals[0])) || pfx : pfx) + vals.join(delim) + sfx; //note: prefix might be different, like for clipPath it could start with inset( or polygon(
-=======
-      return pfx + vals.join(delim) + sfx;
->>>>>>> a2632ded49880d8e2a47865cdf6665e5a6b4e1e1
     };
 
     return _formatter2;
@@ -5139,11 +5108,7 @@ _TweenLite._gsScope._gsDefine("plugins.CSSPlugin", ["plugins.TweenPlugin", "Twee
         rect,
         width;
 
-<<<<<<< HEAD
     if (_doc.createElementNS && _docElement.appendChild && !force) {
-=======
-    if (_doc.createElementNS && !force) {
->>>>>>> a2632ded49880d8e2a47865cdf6665e5a6b4e1e1
       //IE8 and earlier doesn't support SVG anyway
       svg = _createSVG("svg", _docElement);
       rect = _createSVG("rect", svg, {
@@ -5317,11 +5282,7 @@ _TweenLite._gsScope._gsDefine("plugins.CSSPlugin", ["plugins.TweenPlugin", "Twee
 
     isDefault = !s || s === "none" || s === "matrix(1, 0, 0, 1, 0, 0)";
 
-<<<<<<< HEAD
     if (_transformProp && isDefault && !e.offsetParent && e !== _docElement) {
-=======
-    if (_transformProp && isDefault && !e.offsetParent) {
->>>>>>> a2632ded49880d8e2a47865cdf6665e5a6b4e1e1
       //note: if offsetParent is null, that means the element isn't in the normal document flow, like if it has display:none or one of its ancestors has display:none). Firefox returns null for getComputedStyle() if the element is in an iframe that has display:none. https://bugzilla.mozilla.org/show_bug.cgi?id=548397
       //browsers don't report transforms accurately unless the element is in the DOM and has a display value that's not "none". Firefox and Microsoft browsers have a partial bug where they'll report transforms even if display:none BUT not any percentage-based values like translate(-50%, 8px) will be reported as if it's translate(0, 8px).
       n = style.display;
@@ -6292,17 +6253,10 @@ _TweenLite._gsScope._gsDefine("plugins.CSSPlugin", ["plugins.TweenPlugin", "Twee
   });
 
   _registerComplexSpecialProp("clipPath", {
-<<<<<<< HEAD
     defaultValue: "inset(0%)",
     prefix: true,
     multi: true,
     formatter: _getFormatter("inset(0% 0% 0% 0%)", false, true)
-=======
-    defaultValue: "inset(0px)",
-    prefix: true,
-    multi: true,
-    formatter: _getFormatter("inset(0px 0px 0px 0px)", false, true)
->>>>>>> a2632ded49880d8e2a47865cdf6665e5a6b4e1e1
   });
 
   _registerComplexSpecialProp("borderRadius", {
@@ -6719,15 +6673,11 @@ _TweenLite._gsScope._gsDefine("plugins.CSSPlugin", ["plugins.TweenPlugin", "Twee
       difData = _cssDif(t, bs, _getAllStyles(t), vars, cnptLookup);
       t.setAttribute("class", b);
       pt.data = difData.firstMPT;
-<<<<<<< HEAD
 
       if (t.style.cssText !== cssText) {
         //only apply if things change. Otherwise, in cases like a background-image that's pulled dynamically, it could cause a refresh. See https://greensock.com/forums/topic/20368-possible-gsap-bug-switching-classnames-in-chrome/.
         t.style.cssText = cssText; //we recorded cssText before we swapped classes and ran _getAllStyles() because in cases when a className tween is overwritten, we remove all the related tweening properties from that class change (otherwise class-specific stuff can't override properties we've directly set on the target's style object due to specificity).
       }
-=======
-      t.style.cssText = cssText; //we recorded cssText before we swapped classes and ran _getAllStyles() because in cases when a className tween is overwritten, we remove all the related tweening properties from that class change (otherwise class-specific stuff can't override properties we've directly set on the target's style object due to specificity).
->>>>>>> a2632ded49880d8e2a47865cdf6665e5a6b4e1e1
 
       pt = pt.xfirst = cssp.parse(t, difData.difs, pt, plugin); //we record the CSSPropTween as the xfirst so that we can handle overwriting propertly (if "className" gets overwritten, we must kill all the properties associated with the className part of the tween, so we can loop through from xfirst to the pt itself)
 
@@ -7831,11 +7781,7 @@ _TweenLite._gsScope._gsDefine("TimelineLite", ["core.Animation", "core.SimpleTim
 
         distances.max = max - min;
         distances.min = min;
-<<<<<<< HEAD
         distances.v = l = vars.amount || vars.each * (wrap > l ? l - 1 : !axis ? Math.max(wrap, l / wrap) : axis === "y" ? l / wrap : wrap) || 0;
-=======
-        distances.v = l = vars.amount || vars.each * (wrap > l ? l : !axis ? Math.max(wrap, l / wrap) : axis === "y" ? l / wrap : wrap) || 0;
->>>>>>> a2632ded49880d8e2a47865cdf6665e5a6b4e1e1
         distances.b = l < 0 ? base - l : base;
       }
 
@@ -7845,11 +7791,7 @@ _TweenLite._gsScope._gsDefine("TimelineLite", ["core.Animation", "core.SimpleTim
   },
       p = TimelineLite.prototype = new _TweenLite.SimpleTimeline();
 
-<<<<<<< HEAD
   TimelineLite.version = "2.1.3";
-=======
-  TimelineLite.version = "2.1.2";
->>>>>>> a2632ded49880d8e2a47865cdf6665e5a6b4e1e1
   TimelineLite.distribute = _distribute;
   p.constructor = TimelineLite;
   p.kill()._gc = p._forcingPlayhead = p._hasPause = false;
@@ -8246,7 +8188,6 @@ _TweenLite._gsScope._gsDefine("TimelineLite", ["core.Animation", "core.SimpleTim
       time += self._time - prevTime;
     }
 
-<<<<<<< HEAD
     if (self._hasPause && !self._forcingPlayhead && !suppressEvents) {
       if (time > prevTime) {
         tween = self._first;
@@ -8274,8 +8215,6 @@ _TweenLite._gsScope._gsDefine("TimelineLite", ["core.Animation", "core.SimpleTim
       }
     }
 
-=======
->>>>>>> a2632ded49880d8e2a47865cdf6665e5a6b4e1e1
     if (time >= totalDur - _tinyNum && time >= 0) {
       //to work around occasional floating point math artifacts.
       self._totalTime = self._time = totalDur;
@@ -8344,36 +8283,6 @@ _TweenLite._gsScope._gsDefine("TimelineLite", ["core.Animation", "core.SimpleTim
         }
       }
     } else {
-<<<<<<< HEAD
-=======
-      if (self._hasPause && !self._forcingPlayhead && !suppressEvents) {
-        if (time >= prevTime) {
-          tween = self._first;
-
-          while (tween && tween._startTime <= time && !pauseTween) {
-            if (!tween._duration) if (tween.data === "isPause" && !tween.ratio && !(tween._startTime === 0 && self._rawPrevTime === 0)) {
-              pauseTween = tween;
-            }
-            tween = tween._next;
-          }
-        } else {
-          tween = self._last;
-
-          while (tween && tween._startTime >= time && !pauseTween) {
-            if (!tween._duration) if (tween.data === "isPause" && tween._rawPrevTime > 0) {
-              pauseTween = tween;
-            }
-            tween = tween._prev;
-          }
-        }
-
-        if (pauseTween) {
-          self._time = self._totalTime = time = pauseTween._startTime;
-          pauseTime = self._startTime + time / self._timeScale;
-        }
-      }
-
->>>>>>> a2632ded49880d8e2a47865cdf6665e5a6b4e1e1
       self._totalTime = self._time = self._rawPrevTime = time;
     }
 
@@ -8797,13 +8706,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
 
 /*!
-<<<<<<< HEAD
  * VERSION: 2.1.3
  * DATE: 2019-05-17
-=======
- * VERSION: 2.1.2
- * DATE: 2019-03-01
->>>>>>> a2632ded49880d8e2a47865cdf6665e5a6b4e1e1
  * UPDATES AND DOCS AT: http://greensock.com
  *
  * @license Copyright (c) 2008-2019, GreenSock. All rights reserved.
@@ -8834,11 +8738,7 @@ _TweenLite._gsScope._gsDefine("TimelineMax", ["TimelineLite", "TweenLite", "easi
 
   p.constructor = TimelineMax;
   p.kill()._gc = false;
-<<<<<<< HEAD
   TimelineMax.version = "2.1.3";
-=======
-  TimelineMax.version = "2.1.2";
->>>>>>> a2632ded49880d8e2a47865cdf6665e5a6b4e1e1
 
   p.invalidate = function () {
     this._yoyo = !!this.vars.yoyo;
@@ -9074,7 +8974,6 @@ _TweenLite._gsScope._gsDefine("TimelineMax", ["TimelineLite", "TweenLite", "easi
           }
         }
       }
-<<<<<<< HEAD
     }
 
     if (self._hasPause && !self._forcingPlayhead && !suppressEvents) {
@@ -9106,39 +9005,6 @@ _TweenLite._gsScope._gsDefine("TimelineMax", ["TimelineLite", "TweenLite", "easi
         if (pauseTween._startTime < dur) {
           self._time = self._rawPrevTime = time = pauseTween._startTime;
           self._totalTime = time + self._cycle * (self._totalDuration + self._repeatDelay);
-=======
-
-      if (self._hasPause && !self._forcingPlayhead && !suppressEvents) {
-        time = self._time;
-
-        if (time >= prevTime || self._repeat && prevCycle !== self._cycle) {
-          tween = self._first;
-
-          while (tween && tween._startTime <= time && !pauseTween) {
-            if (!tween._duration) if (tween.data === "isPause" && !tween.ratio && !(tween._startTime === 0 && self._rawPrevTime === 0)) {
-              pauseTween = tween;
-            }
-            tween = tween._next;
-          }
-        } else {
-          tween = self._last;
-
-          while (tween && tween._startTime >= time && !pauseTween) {
-            if (!tween._duration) if (tween.data === "isPause" && tween._rawPrevTime > 0) {
-              pauseTween = tween;
-            }
-            tween = tween._prev;
-          }
-        }
-
-        if (pauseTween) {
-          pauseTime = self._startTime + pauseTween._startTime / self._timeScale;
-
-          if (pauseTween._startTime < dur) {
-            self._time = self._rawPrevTime = time = pauseTween._startTime;
-            self._totalTime = time + self._cycle * (self._totalDuration + self._repeatDelay);
-          }
->>>>>>> a2632ded49880d8e2a47865cdf6665e5a6b4e1e1
         }
       }
     }
@@ -9489,13 +9355,8 @@ exports.default = exports.BezierPlugin = void 0;
 var _TweenLite = require("./TweenLite.js");
 
 /*!
-<<<<<<< HEAD
  * VERSION: 1.3.9
  * DATE: 2019-05-17
-=======
- * VERSION: 1.3.8
- * DATE: 2018-05-30
->>>>>>> a2632ded49880d8e2a47865cdf6665e5a6b4e1e1
  * UPDATES AND DOCS AT: http://greensock.com
  *
  * @license Copyright (c) 2008-2019, GreenSock. All rights reserved.
@@ -9918,11 +9779,7 @@ var _RAD2DEG = 180 / Math.PI,
     BezierPlugin = _TweenLite._gsScope._gsDefine.plugin({
   propName: "bezier",
   priority: -1,
-<<<<<<< HEAD
   version: "1.3.9",
-=======
-  version: "1.3.8",
->>>>>>> a2632ded49880d8e2a47865cdf6665e5a6b4e1e1
   API: 2,
   global: true,
   //gets called when the tween renders for the first time. This is where initial values should be recorded and any setup routines should run.
@@ -10025,12 +9882,8 @@ var _RAD2DEG = 180 / Math.PI,
         val,
         l,
         lengths,
-<<<<<<< HEAD
         curSeg,
         v1;
-=======
-        curSeg;
->>>>>>> a2632ded49880d8e2a47865cdf6665e5a6b4e1e1
 
     if (!this._timeRes) {
       curIndex = v < 0 ? 0 : v >= 1 ? segments - 1 : segments * v >> 0;
@@ -10038,7 +9891,6 @@ var _RAD2DEG = 180 / Math.PI,
     } else {
       lengths = this._lengths;
       curSeg = this._curSeg;
-<<<<<<< HEAD
       v1 = v * this._length;
       i = this._li; //find the appropriate segment (if the currently cached one isn't correct)
 
@@ -10046,31 +9898,15 @@ var _RAD2DEG = 180 / Math.PI,
         l = segments - 1;
 
         while (i < l && (this._l2 = lengths[++i]) <= v1) {}
-=======
-      v *= this._length;
-      i = this._li; //find the appropriate segment (if the currently cached one isn't correct)
-
-      if (v > this._l2 && i < segments - 1) {
-        l = segments - 1;
-
-        while (i < l && (this._l2 = lengths[++i]) <= v) {}
->>>>>>> a2632ded49880d8e2a47865cdf6665e5a6b4e1e1
 
         this._l1 = lengths[i - 1];
         this._li = i;
         this._curSeg = curSeg = this._segments[i];
         this._s2 = curSeg[this._s1 = this._si = 0];
-<<<<<<< HEAD
       } else if (v1 < this._l1 && i > 0) {
         while (i > 0 && (this._l1 = lengths[--i]) >= v1) {}
 
         if (i === 0 && v1 < this._l1) {
-=======
-      } else if (v < this._l1 && i > 0) {
-        while (i > 0 && (this._l1 = lengths[--i]) >= v) {}
-
-        if (i === 0 && v < this._l1) {
->>>>>>> a2632ded49880d8e2a47865cdf6665e5a6b4e1e1
           this._l1 = 0;
         } else {
           i++;
@@ -10085,7 +9921,6 @@ var _RAD2DEG = 180 / Math.PI,
 
       curIndex = i; //now find the appropriate sub-segment (we split it into the number of pieces that was defined by "precision" and measured each one)
 
-<<<<<<< HEAD
       v1 -= this._l1;
       i = this._si;
 
@@ -10100,22 +9935,6 @@ var _RAD2DEG = 180 / Math.PI,
         while (i > 0 && (this._s1 = curSeg[--i]) >= v1) {}
 
         if (i === 0 && v1 < this._s1) {
-=======
-      v -= this._l1;
-      i = this._si;
-
-      if (v > this._s2 && i < curSeg.length - 1) {
-        l = curSeg.length - 1;
-
-        while (i < l && (this._s2 = curSeg[++i]) <= v) {}
-
-        this._s1 = curSeg[i - 1];
-        this._si = i;
-      } else if (v < this._s1 && i > 0) {
-        while (i > 0 && (this._s1 = curSeg[--i]) >= v) {}
-
-        if (i === 0 && v < this._s1) {
->>>>>>> a2632ded49880d8e2a47865cdf6665e5a6b4e1e1
           this._s1 = 0;
         } else {
           i++;
@@ -10125,11 +9944,7 @@ var _RAD2DEG = 180 / Math.PI,
         this._si = i;
       }
 
-<<<<<<< HEAD
       t = v === 1 ? 1 : (i + (v1 - this._s1) / (this._s2 - this._s1)) * this._prec || 0;
-=======
-      t = (i + (v - this._s1) / (this._s2 - this._s1)) * this._prec || 0;
->>>>>>> a2632ded49880d8e2a47865cdf6665e5a6b4e1e1
     }
 
     inv = 1 - t;
@@ -11006,11 +10821,10 @@ var wheel_3 = [];
 var wheel_4 = [];
 var wheel_5 = []; //init kalder på funktion wheelArrayMaker
 
-window.addEventListener("DOMContentLoaded", init);
+window.addEventListener("DOMContentLoaded", init); //inden spillet åbner, flyver der en rakat ind som fungerer som loading bar
+//Tweenmax sørger for at animationen er flydende
 
 function init() {
-<<<<<<< HEAD
-=======
   var rocket = document.querySelector("#loadingIcon");
   var rocketBar = document.querySelector("#loadingBar");
 
@@ -11025,6 +10839,7 @@ function init() {
 }
 
 function openGame() {
+  //alle loading komponenterne bliver sat sammen, for at simulerer at ilden  fylder loading baren ud
   document.querySelector("main").style.display = "block";
   console.log("OPEN UP");
   var topBar = document.querySelector("#topLoading");
@@ -11056,13 +10871,13 @@ function openGame() {
     y: "100vw",
     onComplete: start
   });
-}
+} //functionen start skjuler loading elementerne
+
 
 function start() {
   document.querySelector("#gevinstBorder").style.transform = "scale(1) translateY(0)";
-  document.querySelector("#loadingScreen").style.display = "none";
-  console.log("start");
->>>>>>> a2632ded49880d8e2a47865cdf6665e5a6b4e1e1
+  document.querySelector("#loadingScreen").style.display = "none"; //saldoen bliver sat lige med sats fratrukket saldo, og sat ind i HTML'en
+
   document.querySelector("#startSpil").addEventListener("click", function () {
     var satsInputValue = document.querySelector("#satsInput").value;
     sats = parseInt(satsInputValue, 10);
@@ -11123,7 +10938,8 @@ function wheelArrayMaker() {
   var arrayCollection = [wheel_1, wheel_2, wheel_3, wheel_4, wheel_5];
   arrayCollection.forEach(selectThree);
   divFactory(arrayCollection);
-} //under contruction
+} //vi laver 6 DIV'er i et loop, og de får alle et ID, afhængigt af counteren
+//så første DIV får ID 1, osv.
 
 
 function divFactory(array) {
@@ -11132,14 +10948,18 @@ function divFactory(array) {
   for (divFactoryCounter = 1; divFactoryCounter < 6; divFactoryCounter++) {
     var wheelDiv = document.createElement("div");
     wheelDiv.setAttribute("id", "wheel".concat(divFactoryCounter));
-    wheelDiv.setAttribute("class", "wheel");
+    wheelDiv.setAttribute("class", "wheel"); //hjulene bliver påsat wheelArea i HTML'en
+
     document.getElementById("wheelArea").appendChild(wheelDiv);
   }
 
   var wheelCounterDiv = 0;
   array.forEach(function (wheel) {
     wheelCounterDiv++;
-    var displayCaseCounter = 0;
+    var displayCaseCounter = 0; //for hvert et hjul, bliver der påsat en div med en værdi, id og class
+    //displayCase er "hullerne", hvor billederne er inde i
+    //value er et tal fra 1 - 6, som hver især reprænsetere et ikon
+
     wheel.forEach(function (displayCase) {
       displayCaseCounter++;
       var displayCaseDiv = document.createElement("div");
@@ -11153,6 +10973,8 @@ function divFactory(array) {
 }
 
 function paintWheelDivs() {
+  //vi sætter værdierne fra 1 - 6 til at være lige med et ikon
+  //vores ikoner er defineret globalt
   var allDisplayCases = document.querySelectorAll(".displayCaseDiv");
   allDisplayCases.forEach(function (div) {
     if (div.getAttribute("value") == 1) {
@@ -11187,12 +11009,15 @@ function paintWheelDivs() {
 }
 
 function animateWheels() {
+  //funktionen animateWheels
   var allWheels = document.querySelectorAll(".wheel");
   var localCounter = -1;
   var tweenDelayCounter = -0.5;
   allWheels.forEach(function (wheel) {
     localCounter++;
-    tweenDelayCounter = tweenDelayCounter + 0.5;
+    tweenDelayCounter = tweenDelayCounter + 0.5; //distancen er den del af animationen, som simulerer at hjulene drejer hurtigt
+    //distancen er afhængig af hvilken den i vores position array som der bliver landet på
+
     var tweenDistance = arrayPositionArray[localCounter] * 14.01;
 
     _TweenMax.default.to(wheel, 0.5, {
@@ -11204,19 +11029,29 @@ function animateWheels() {
 }
 
 function checkVictory() {
-  resultsArray.forEach(function (value, index) {
+  //vi har et array med vores resultatern, som siger at hvis
+  resultsArray.forEach(function (index) {
+    //index fortæller hvilken position i forEach loopen bliver sat igennem array'et
+    //vi undersøger om positionen stemmer på alle tre rækker - for at finde den korrekte position, tilføjer vi tre, for at se på rækken efter
+    //derved kan vi vandret tjekke. om der er 3 af index i træk
+    // i dette tilfælde undersøger vi om der er en af værdien 4 i hver række, da tre er tre af alien ikonet
     if (resultsArray[index] == resultsArray[index + 3] && resultsArray[index + 3] == resultsArray[index + 6] && resultsArray[index] == 4) {
+      //hvis der er en alien i hver række vertikalt, bliver modalPopUp kaldt
       modalPopUp();
     }
   });
-  resultsArray.forEach(function (value, index) {
+  resultsArray.forEach(function (index) {
+    //vi tilføjer 3 til index, for at undersøge om der er den samme værdi på den første og anden række
+    //dernæst undersøger vi om der er den samme værdi i den anden række og den tredje række
     if (resultsArray[index] == resultsArray[index + 3] && resultsArray[index + 3] == resultsArray[index + 6]) {
+      //tre på stribe vertikalt udløser indsatsen ganget 6
       if (resultsArray[index] == 1) {
         saldo = saldo + sats * 6;
         document.querySelector("#saldoText").textContent = "".concat(saldo, ",- DKK");
         document.querySelector("#gevinstText").textContent = "".concat(sats * 6, ",- DKK");
         enLargeMyGevinst();
-      }
+      } //hvis billederne er lige med ikonerne 2, 5 eller 6 (planet, saturn eller mars), bliver insatsen ganget med 2
+
 
       if (resultsArray[index] == 2 || resultsArray[index] == 5 || resultsArray[index] == 6) {
         saldo = saldo + sats * 2;
@@ -11233,7 +11068,7 @@ function checkVictory() {
       }
     }
   });
-  resultsArray.forEach(function (value, index) {
+  resultsArray.forEach(function (index) {
     if (resultsArray[index] == resultsArray[index + 3] && resultsArray[index + 3] == resultsArray[index + 6] && resultsArray[index + 6] == resultsArray[index + 9]) {
       if (resultsArray[index] == 1) {
         saldo = saldo + sats * 6;
@@ -11247,7 +11082,8 @@ function checkVictory() {
         document.querySelector("#saldoText").textContent = "".concat(saldo, ",- DKK");
         document.querySelector("#gevinstText").textContent = "".concat(sats * 2, ",- DKK");
         enLargeMyGevinst();
-      }
+      } // hvis værdien er lige med ikon tre (asteroiden), så bliver insatsen ganget med 1.5
+
 
       if (resultsArray[index] == 3) {
         saldo = saldo + sats * 1.5;
@@ -11258,12 +11094,14 @@ function checkVictory() {
     }
   });
 
-  if (resultsArray[0] == resultsArray[3] && resultsArray[3] == resultsArray[6] && resultsArray[6] == resultsArray[9] && resultsArray[9] == resultsArray[12]) {
+  if ( //hvis der er fire på på vertikal række
+  resultsArray[0] == resultsArray[3] && resultsArray[3] == resultsArray[6] && resultsArray[6] == resultsArray[9] && resultsArray[9] == resultsArray[12]) {
+    //hvis det er 4 stjerner på række (værdi 1), bliver satsen ganget med 6
     if (resultsArray[0] == 1) {
       saldo = saldo + sats * 6;
       document.querySelector("#saldoText").textContent = "".concat(saldo, ",- DKK");
       document.querySelector("#gevinstText").textContent = "".concat(sats * 6, ",- DKK");
-      enLargeMyGevinst();
+      enLargeMyGevinst(); //hvis det er 4 planeter på række (værdi 1), bliver satsen ganget med 6
     }
 
     if (resultsArray[0] == 2 || resultsArray[1] == 5 || resultsArray[1] == 6) {
@@ -11271,7 +11109,8 @@ function checkVictory() {
       document.querySelector("#saldoText").textContent = "".concat(saldo, ",- DKK");
       document.querySelector("#gevinstText").textContent = "".concat(sats * 2, ",- DKK");
       enLargeMyGevinst();
-    }
+    } //hvis det er 4 asteorider på række (værdi 1), bliver satsen ganget med 6
+
 
     if (resultsArray[0] == 3) {
       saldo = saldo + sats * 1.5;
@@ -11279,7 +11118,8 @@ function checkVictory() {
       document.querySelector("#gevinstText").textContent = "".concat(sats * 1.5, ",- DKK");
       enLargeMyGevinst();
     }
-  } else {}
+  } else {} //processen bliver gentaget for midterste række
+
 
   if (resultsArray[1] == resultsArray[4] && resultsArray[4] == resultsArray[7] && resultsArray[7] == resultsArray[10] && resultsArray[10] == resultsArray[13]) {
     if (resultsArray[1] == 1) {
@@ -11302,7 +11142,8 @@ function checkVictory() {
       document.querySelector("#gevinstText").textContent = "".concat(sats * 1.5, ",- DKK");
       enLargeMyGevinst();
     }
-  } else {}
+  } else {} //processen bliver gentaget for sidste række
+
 
   if (resultsArray[2] == resultsArray[5] && resultsArray[5] == resultsArray[8] && resultsArray[8] == resultsArray[11] && resultsArray[11] == resultsArray[14]) {
     if (resultsArray[2] == 4) {
@@ -11484,7 +11325,7 @@ var modal = document.getElementById("myModal");
 var planetClicked = true;
 
 function instanciateObjects(emitter) {
-  emitter.style.display = "block"; //prikkerne bliver sat i containeren, for at rykke eksplosionen
+  emitter.style.display = "block"; //prikkerne bliver sat i containeren, for at placerer eksplosionen
 
   var container = document.createElement("div"); //konfiguration af prikker
 
@@ -11497,7 +11338,7 @@ function instanciateObjects(emitter) {
   document.body.appendChild(container);
 
   emitter.onclick = function () {
-    emitter.style.display = "none";
+    emitter.style.display = "none"; //den aktive planet (planetten som bliver klikket på) får en tekst tilføjet (hvor gevinsten står)
 
     if (emitter.getAttribute("planetactive") === "planet1") {
       document.querySelector("#text1").style.display = "block";
@@ -11521,7 +11362,7 @@ function instanciateObjects(emitter) {
         length,
         dot,
         i,
-        size; //sskaber prikkerne
+        size; //skaber prikkerne
 
     for (i = 0; i < dotQuantity; i++) {
       dot = document.createElement("div");
@@ -11541,7 +11382,7 @@ function instanciateObjects(emitter) {
         xPercent: 0,
         yPercent: 0,
         force3D: true
-      }); //animation
+      }); //animationen - matematikken sørger for, at prikkerne lander på forskellige vinkler med forskellige længder
 
 
       tl.to(dot, 1 + Math.random(), {
@@ -11568,16 +11409,18 @@ function instanciateObjects(emitter) {
 
   function getRandom(min, max) {
     return min + Math.random() * (max - min);
-  } //explode initially, and then whenever the user presses on the dot.
+  } //når man trykker på emitter (en planet), så starter eksplosionen
 
 
-  emitter.addEventListener("click", testMe, true);
+  emitter.addEventListener("click", triggerExplosion, true);
 
-  function testMe() {
+  function triggerExplosion() {
     explode(emitter);
     calcMinigameVictory(emitter);
   }
-}
+} //den følgende funktion tager den planet, som er trykket på, og tager tallet fra planetten
+// f.eks hvis der bliver trykket på den første planet (planet1), tager slicedPlanetSelector tallet 1
+
 
 function calcMinigameVictory(planet) {
   var planetSelector = planet.getAttribute("planetactive");
@@ -11585,7 +11428,9 @@ function calcMinigameVictory(planet) {
   var selectedPlanets = document.querySelectorAll(".text");
   var victorytext = document.getElementById("vicTxt".concat(slicedPlanetSelector));
   var modalGevinstText = document.getElementById("modalGevinst".concat(slicedPlanetSelector));
-  console.log(modalGevinstText);
+  console.log(modalGevinstText); //minigameCalc udregner et tilfældigt helt tal mellem 0 og 100
+  // hvis tallet er mindre end 10, vinder man den store gevinst
+
   var minigameCalc = Math.floor(Math.random() * 100) + 1;
 
   if (minigameCalc <= 10) {
@@ -11597,9 +11442,10 @@ function calcMinigameVictory(planet) {
     document.querySelector("#gevinstText").textContent = "".concat(sats * 10, ",- DKK");
     setTimeout(function () {
       enLargeMyGevinst();
-      modal.style.display = "none";
-    }, 3000000);
-  }
+      modal.style.display = "none"; //efter tre sekunder, lukker modalet
+    }, 30000000);
+  } //hvis tallet er større end 10 og mindre end 25, får man en mellem gevinst
+
 
   if (minigameCalc >= 10 && minigameCalc <= 25) {
     victorytext.parentElement.classList.add("mellemGevinst");
@@ -11611,8 +11457,9 @@ function calcMinigameVictory(planet) {
     setTimeout(function () {
       enLargeMyGevinst();
       modal.style.display = "none";
-    }, 3000);
-  }
+    }, 300000);
+  } //hvis tallet er større end 25, og mindre en 55, så får man en lille gevinst
+
 
   if (minigameCalc >= 25 && minigameCalc <= 55) {
     victorytext.parentElement.classList.add("lilleGevinst");
@@ -11624,8 +11471,9 @@ function calcMinigameVictory(planet) {
     setTimeout(function () {
       modal.style.display = "none";
       enLargeMyGevinst();
-    }, 3000);
-  }
+    }, 3000000);
+  } //hvis tallet er højere end 55 og mindre end 100, vinder man ingenting (lidt mindre end 50% change for at tabe)
+
 
   if (minigameCalc >= 55 && minigameCalc <= 100) {
     victorytext.parentElement.classList.add("nitte");
@@ -11633,66 +11481,42 @@ function calcMinigameVictory(planet) {
     modalGevinstText.textContent = "";
     setTimeout(function () {
       modal.style.display = "none";
-    }, 3000);
+    }, 3000000);
   }
 }
 
 function modalPopUp() {
-  // When the user clicks on the button, open the modal
-  modal.style.display = "block"; // When the user clicks on <span> (x), close the modal
-  // When the user clicks anywhere outside of the modal, close it
-
-  window.onclick = function (event) {
-    if (event.target == modal) {
-      modal.style.display = "none";
-    }
-  };
-
+  // modallet dukker op, når funktionen bliver kalgt
+  modal.style.display = "block";
   var textArray = document.querySelectorAll(".text");
   textArray.forEach(function (obj) {
     obj.style.display = "none";
   });
-  var planetCounter = 1;
+  var planetCounter = 1; //planeterne bliver placeret i et array
+  //planeterne for et tal, baseret på hvor mange planeter der er (i dette tilfælde er det 3)
+
   var emitterArray = document.querySelectorAll(".img");
   emitterArray.forEach(function (obj) {
     obj.setAttribute("planetActive", "planet".concat(planetCounter));
     planetCounter++;
     instanciateObjects(obj);
   });
-}
+} //enLargeGevinst sørger for, at gevinst feltet bliver forstørret, hver gang man vinder
+
 
 function enLargeMyGevinst() {
   console.log("ENLARGE");
-<<<<<<< HEAD
-  var gevinstTextBlock = document.querySelector("#gevinstBorder");
-  /*  TweenMax.to(gevinstTextBlock, 0.8, {
-    scale: 2,
-    y: "-10vw",
-    onComplete: minimize()
-  }); */
-=======
   var enlargeText = document.querySelector("#gevinstBorder");
   enlargeText.style.transform = "scale(1.3) translateY(-10vw)";
-  setTimeout(minimize, 500);
->>>>>>> a2632ded49880d8e2a47865cdf6665e5a6b4e1e1
+  setTimeout(minimize, 500); //efter 500 milisekunder bliver den lille igen
 }
 
 function minimize() {
   console.log("minify");
   var gevinstTextBlock = document.querySelector("#gevinstBorder");
-<<<<<<< HEAD
-
-  _TweenMax.default.to(gevinstTextBlock, 0.8, {
-    scale: 1,
-    y: "10vw"
-  });
-}
-},{"gsap/TweenMax":"node_modules/gsap/TweenMax.js","gsap/TweenLite":"node_modules/gsap/TweenLite.js"}],"../../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
-=======
   gevinstTextBlock.style.transform = "scale(1) translateY(0vw)";
 }
-},{"gsap/TweenMax":"node_modules/gsap/TweenMax.js","gsap/TweenLite":"node_modules/gsap/TweenLite.js"}],"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
->>>>>>> a2632ded49880d8e2a47865cdf6665e5a6b4e1e1
+},{"gsap/TweenMax":"node_modules/gsap/TweenMax.js","gsap/TweenLite":"node_modules/gsap/TweenLite.js"}],"../../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -11720,11 +11544,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-<<<<<<< HEAD
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57436" + '/');
-=======
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51088" + '/');
->>>>>>> a2632ded49880d8e2a47865cdf6665e5a6b4e1e1
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56030" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -11899,9 +11719,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-<<<<<<< HEAD
 },{}]},{},["../../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","spil.js"], null)
-=======
-},{}]},{},["../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","spil.js"], null)
->>>>>>> a2632ded49880d8e2a47865cdf6665e5a6b4e1e1
 //# sourceMappingURL=/spil.6d569108.js.map

@@ -24,6 +24,9 @@ const wheel_5 = [];
 
 window.addEventListener("DOMContentLoaded", init);
 
+//inden spillet åbner, flyver der en rakat ind som fungerer som loading bar
+//Tweenmax sørger for at animationen er flydende
+
 function init() {
   let rocket = document.querySelector("#loadingIcon");
   let rocketBar = document.querySelector("#loadingBar");
@@ -37,6 +40,8 @@ function init() {
   });
 }
 function openGame() {
+  //alle loading komponenterne bliver sat sammen, for at simulerer at ilden  fylder loading baren ud
+
   document.querySelector("main").style.display = "block";
   console.log("OPEN UP");
   let topBar = document.querySelector("#topLoading");
@@ -67,11 +72,15 @@ function openGame() {
   });
 }
 
+//functionen start skjuler loading elementerne
+
 function start() {
   document.querySelector("#gevinstBorder").style.transform =
     "scale(1) translateY(0)";
   document.querySelector("#loadingScreen").style.display = "none";
-  console.log("start");
+
+  //saldoen bliver sat lige med sats fratrukket saldo, og sat ind i HTML'en
+
   document.querySelector("#startSpil").addEventListener("click", () => {
     let satsInputValue = document.querySelector("#satsInput").value;
     sats = parseInt(satsInputValue, 10);
@@ -147,7 +156,8 @@ function wheelArrayMaker() {
   divFactory(arrayCollection);
 }
 
-//under contruction
+//vi laver 6 DIV'er i et loop, og de får alle et ID, afhængigt af counteren
+//så første DIV får ID 1, osv.
 
 function divFactory(array) {
   let divFactoryCounter;
@@ -156,6 +166,8 @@ function divFactory(array) {
     wheelDiv.setAttribute("id", `wheel${divFactoryCounter}`);
     wheelDiv.setAttribute("class", "wheel");
 
+    //hjulene bliver påsat wheelArea i HTML'en
+
     document.getElementById("wheelArea").appendChild(wheelDiv);
   }
 
@@ -163,7 +175,14 @@ function divFactory(array) {
 
   array.forEach(wheel => {
     wheelCounterDiv++;
+
     let displayCaseCounter = 0;
+
+    //for hvert et hjul, bliver der påsat en div med en værdi, id og class
+    //displayCase er "hullerne", hvor billederne er inde i
+
+    //value er et tal fra 1 - 6, som hver især reprænsetere et ikon
+
     wheel.forEach(displayCase => {
       displayCaseCounter++;
       let displayCaseDiv = document.createElement("div");
@@ -179,6 +198,9 @@ function divFactory(array) {
 }
 
 function paintWheelDivs() {
+  //vi sætter værdierne fra 1 - 6 til at være lige med et ikon
+  //vores ikoner er defineret globalt
+
   let allDisplayCases = document.querySelectorAll(".displayCaseDiv");
   allDisplayCases.forEach(div => {
     if (div.getAttribute("value") == 1) {
@@ -207,6 +229,8 @@ function paintWheelDivs() {
   animateWheels();
 }
 function animateWheels() {
+  //funktionen animateWheels
+
   let allWheels = document.querySelectorAll(".wheel");
 
   let localCounter = -1;
@@ -214,6 +238,9 @@ function animateWheels() {
   allWheels.forEach(wheel => {
     localCounter++;
     tweenDelayCounter = tweenDelayCounter + 0.5;
+
+    //distancen er den del af animationen, som simulerer at hjulene drejer hurtigt
+    //distancen er afhængig af hvilken den i vores position array som der bliver landet på
 
     let tweenDistance = arrayPositionArray[localCounter] * 14.01;
     TweenMax.to(wheel, 0.5, {
@@ -224,21 +251,36 @@ function animateWheels() {
   setTimeout(checkVictory, 2500);
 }
 function checkVictory() {
-  resultsArray.forEach((value, index) => {
+  //vi har et array med vores resultatern, som siger at hvis
+
+  resultsArray.forEach(index => {
+    //index fortæller hvilken position i forEach loopen bliver sat igennem array'et
+
+    //vi undersøger om positionen stemmer på alle tre rækker - for at finde den korrekte position, tilføjer vi tre, for at se på rækken efter
+    //derved kan vi vandret tjekke. om der er 3 af index i træk
+    // i dette tilfælde undersøger vi om der er en af værdien 4 i hver række, da tre er tre af alien ikonet
+
     if (
       resultsArray[index] == resultsArray[index + 3] &&
       resultsArray[index + 3] == resultsArray[index + 6] &&
       resultsArray[index] == 4
     ) {
+      //hvis der er en alien i hver række vertikalt, bliver modalPopUp kaldt
+
       modalPopUp();
     }
   });
 
-  resultsArray.forEach((value, index) => {
+  resultsArray.forEach(index => {
+    //vi tilføjer 3 til index, for at undersøge om der er den samme værdi på den første og anden række
+    //dernæst undersøger vi om der er den samme værdi i den anden række og den tredje række
+
     if (
       resultsArray[index] == resultsArray[index + 3] &&
       resultsArray[index + 3] == resultsArray[index + 6]
     ) {
+      //tre på stribe vertikalt udløser indsatsen ganget 6
+
       if (resultsArray[index] == 1) {
         saldo = saldo + sats * 6;
         document.querySelector("#saldoText").textContent = `${saldo},- DKK`;
@@ -246,6 +288,9 @@ function checkVictory() {
           6},- DKK`;
         enLargeMyGevinst();
       }
+
+      //hvis billederne er lige med ikonerne 2, 5 eller 6 (planet, saturn eller mars), bliver insatsen ganget med 2
+
       if (
         resultsArray[index] == 2 ||
         resultsArray[index] == 5 ||
@@ -266,7 +311,7 @@ function checkVictory() {
       }
     }
   });
-  resultsArray.forEach((value, index) => {
+  resultsArray.forEach(index => {
     if (
       resultsArray[index] == resultsArray[index + 3] &&
       resultsArray[index + 3] == resultsArray[index + 6] &&
@@ -290,6 +335,9 @@ function checkVictory() {
           2},- DKK`;
         enLargeMyGevinst();
       }
+
+      // hvis værdien er lige med ikon tre (asteroiden), så bliver insatsen ganget med 1.5
+
       if (resultsArray[index] == 3) {
         saldo = saldo + sats * 1.5;
         document.querySelector("#saldoText").textContent = `${saldo},- DKK`;
@@ -301,16 +349,22 @@ function checkVictory() {
   });
 
   if (
+    //hvis der er fire på på vertikal række
+
     resultsArray[0] == resultsArray[3] &&
     resultsArray[3] == resultsArray[6] &&
     resultsArray[6] == resultsArray[9] &&
     resultsArray[9] == resultsArray[12]
   ) {
+    //hvis det er 4 stjerner på række (værdi 1), bliver satsen ganget med 6
+
     if (resultsArray[0] == 1) {
       saldo = saldo + sats * 6;
       document.querySelector("#saldoText").textContent = `${saldo},- DKK`;
       document.querySelector("#gevinstText").textContent = `${sats * 6},- DKK`;
       enLargeMyGevinst();
+
+      //hvis det er 4 planeter på række (værdi 1), bliver satsen ganget med 6
     }
     if (resultsArray[0] == 2 || resultsArray[1] == 5 || resultsArray[1] == 6) {
       saldo = saldo + sats * 2;
@@ -318,6 +372,9 @@ function checkVictory() {
       document.querySelector("#gevinstText").textContent = `${sats * 2},- DKK`;
       enLargeMyGevinst();
     }
+
+    //hvis det er 4 asteorider på række (værdi 1), bliver satsen ganget med 6
+
     if (resultsArray[0] == 3) {
       saldo = saldo + sats * 1.5;
       document.querySelector("#saldoText").textContent = `${saldo},- DKK`;
@@ -327,6 +384,9 @@ function checkVictory() {
     }
   } else {
   }
+
+  //processen bliver gentaget for midterste række
+
   if (
     resultsArray[1] == resultsArray[4] &&
     resultsArray[4] == resultsArray[7] &&
@@ -354,6 +414,9 @@ function checkVictory() {
     }
   } else {
   }
+
+  //processen bliver gentaget for sidste række
+
   if (
     resultsArray[2] == resultsArray[5] &&
     resultsArray[5] == resultsArray[8] &&
@@ -558,9 +621,10 @@ let planetClicked = true;
 function instanciateObjects(emitter) {
   emitter.style.display = "block";
 
-  //prikkerne bliver sat i containeren, for at rykke eksplosionen
+  //prikkerne bliver sat i containeren, for at placerer eksplosionen
 
   let container = document.createElement("div");
+
   //konfiguration af prikker
 
   let emitterSize = 300;
@@ -576,6 +640,8 @@ function instanciateObjects(emitter) {
 
   emitter.onclick = function() {
     emitter.style.display = "none";
+
+    //den aktive planet (planetten som bliver klikket på) får en tekst tilføjet (hvor gevinsten står)
 
     if (emitter.getAttribute("planetactive") === "planet1") {
       document.querySelector("#text1").style.display = "block";
@@ -602,7 +668,7 @@ function instanciateObjects(emitter) {
       i,
       size;
 
-    //sskaber prikkerne
+    //skaber prikkerne
 
     for (i = 0; i < dotQuantity; i++) {
       dot = document.createElement("div");
@@ -627,7 +693,7 @@ function instanciateObjects(emitter) {
         force3D: true
       });
 
-      //animation
+      //animationen - matematikken sørger for, at prikkerne lander på forskellige vinkler med forskellige længder
 
       tl.to(
         dot,
@@ -659,15 +725,20 @@ function instanciateObjects(emitter) {
     return min + Math.random() * (max - min);
   }
 
-  //explode initially, and then whenever the user presses on the dot.
-  emitter.addEventListener("click", testMe, true);
+  //når man trykker på emitter (en planet), så starter eksplosionen
 
-  function testMe() {
+  emitter.addEventListener("click", triggerExplosion, true);
+
+  function triggerExplosion() {
     explode(emitter);
 
     calcMinigameVictory(emitter);
   }
 }
+
+//den følgende funktion tager den planet, som er trykket på, og tager tallet fra planetten
+// f.eks hvis der bliver trykket på den første planet (planet1), tager slicedPlanetSelector tallet 1
+
 function calcMinigameVictory(planet) {
   let planetSelector = planet.getAttribute("planetactive");
   let slicedPlanetSelector = planetSelector.slice(-1);
@@ -677,6 +748,9 @@ function calcMinigameVictory(planet) {
     `modalGevinst${slicedPlanetSelector}`
   );
   console.log(modalGevinstText);
+
+  //minigameCalc udregner et tilfældigt helt tal mellem 0 og 100
+  // hvis tallet er mindre end 10, vinder man den store gevinst
 
   let minigameCalc = Math.floor(Math.random() * 100) + 1;
 
@@ -690,8 +764,12 @@ function calcMinigameVictory(planet) {
     setTimeout(() => {
       enLargeMyGevinst();
       modal.style.display = "none";
-    }, 3000000);
+
+      //efter tre sekunder, lukker modalet
+    }, 3000);
   }
+
+  //hvis tallet er større end 10 og mindre end 25, får man en mellem gevinst
   if (minigameCalc >= 10 && minigameCalc <= 25) {
     victorytext.parentElement.classList.add("mellemGevinst");
     victorytext.textContent = "DU VANDT DEN MELLEM GEVINST";
@@ -704,6 +782,8 @@ function calcMinigameVictory(planet) {
       modal.style.display = "none";
     }, 3000);
   }
+
+  //hvis tallet er større end 25, og mindre en 55, så får man en lille gevinst
   if (minigameCalc >= 25 && minigameCalc <= 55) {
     victorytext.parentElement.classList.add("lilleGevinst");
     modalGevinstText.textContent = `${sats * 3.5},- DKK`;
@@ -718,6 +798,8 @@ function calcMinigameVictory(planet) {
       enLargeMyGevinst();
     }, 3000);
   }
+
+  //hvis tallet er højere end 55 og mindre end 100, vinder man ingenting (lidt mindre end 50% change for at tabe)
   if (minigameCalc >= 55 && minigameCalc <= 100) {
     victorytext.parentElement.classList.add("nitte");
     victorytext.textContent = "Du vandt ikke noget";
@@ -730,18 +812,9 @@ function calcMinigameVictory(planet) {
 }
 
 function modalPopUp() {
-  // When the user clicks on the button, open the modal
+  // modallet dukker op, når funktionen bliver kalgt
 
   modal.style.display = "block";
-
-  // When the user clicks on <span> (x), close the modal
-
-  // When the user clicks anywhere outside of the modal, close it
-  window.onclick = function(event) {
-    if (event.target == modal) {
-      modal.style.display = "none";
-    }
-  };
 
   let textArray = document.querySelectorAll(".text");
   textArray.forEach(obj => {
@@ -749,6 +822,9 @@ function modalPopUp() {
   });
 
   let planetCounter = 1;
+
+  //planeterne bliver placeret i et array
+  //planeterne for et tal, baseret på hvor mange planeter der er (i dette tilfælde er det 3)
 
   let emitterArray = document.querySelectorAll(".img");
   emitterArray.forEach(obj => {
@@ -759,11 +835,15 @@ function modalPopUp() {
   });
 }
 
+//enLargeGevinst sørger for, at gevinst feltet bliver forstørret, hver gang man vinder
+
 function enLargeMyGevinst() {
   console.log("ENLARGE");
   let enlargeText = document.querySelector("#gevinstBorder");
   enlargeText.style.transform = "scale(1.3) translateY(-10vw)";
   setTimeout(minimize, 500);
+
+  //efter 500 milisekunder bliver den lille igen
 }
 function minimize() {
   console.log("minify");

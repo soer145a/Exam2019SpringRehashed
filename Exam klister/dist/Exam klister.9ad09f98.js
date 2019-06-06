@@ -117,180 +117,79 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"form.js":[function(require,module,exports) {
-"use strict";
+})({"../../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+var bundleURL = null;
 
-window.addEventListener("DOMContentLoaded", init);
-var userArray = [];
-var front = document.querySelector("#formLogin");
-var userData = document.querySelector("#formUserBlock");
-var userInfo = document.querySelector("#formUserInfo");
-var nemId = document.querySelector("#nemID");
-
-function init() {
-  fetchMyJson();
-  console.log("init");
-}
-
-function fetchMyJson() {
-  fetch("https://examusers-4b00.restdb.io/rest/databaseuser?key=22631469345172666884", {
-    method: "get",
-    headers: {
-      Accept: "application/json",
-      "Content-Type": "application/json",
-      "x-apikey": "5cdbfbb9f66d7b1062cb34b7"
-    }
-  }).then(function (res) {
-    return res.json();
-  }).then(function (data) {
-    userArray = data;
-    console.log(userArray);
-    document.querySelector("#formUserButton").addEventListener("click", displayFirstForm);
-    document.querySelector("#formLoginButton").addEventListener("click", function () {
-      checkLoginStatus();
-    });
-  });
-}
-
-function checkLoginStatus() {
-  console.log("CHECK LOGIN");
-  var formUserName = document.querySelector("#formUsername").value;
-  var formPassword = document.querySelector("#formPassword").value;
-  console.log(formUserName);
-  userArray.forEach(function (user) {
-    if (formUserName == user.username) {
-      if (user.password == formPassword) {
-        window.location.replace("http://localhost:1234/spil.html");
-      }
-    }
-  });
-}
-
-function displayFirstForm() {
-  front.style.display = "none";
-  userData.style.display = "block";
-  var dataObject = {
-    username: "-placeholder-",
-    password: "-placeholder-",
-    email: "-placeholder-",
-    telefoneNr: "-placeholder-",
-    fornavn: "-placeholder-",
-    efternavn: "-placeholder-",
-    adresse: "-placeholder-",
-    userID: "-placeholder-",
-    city: "-placeholder-",
-    CPRnr: "-placeholder-"
-  };
-  document.querySelector("#formUserBlockFormButton").addEventListener("click", function () {
-    console.log("CLIKED BUTTON");
-    saveFirstSetOfData(dataObject);
-  });
-}
-
-function saveFirstSetOfData(obj) {
-  console.log("SAVE FIRST SET OF DATA");
-  var usernameForm = document.querySelector("#userName");
-  var userPassword = document.querySelector("#userPassword");
-  var userPasswordTwo = document.querySelector("#userPasswordConfirm");
-  var emailFormen = document.querySelector("#userEmail");
-  var userCounter = 0;
-  userArray.forEach(function (user) {
-    console.log(user.username, usernameForm.value);
-
-    if (user.username == usernameForm.value) {
-      //alert("Brugernavnet er allerede i brug");
-      usernameForm.style.backgroundColor = "red";
-    } else {
-      console.log(usernameForm.checkValidity());
-
-      if (usernameForm.checkValidity() != true) {
-        alert("Indtast gyldigt brugernavn");
-      } else {
-        obj.username = usernameForm.value;
-
-        if (document.querySelector("#userPassword").value == document.querySelector("#userPasswordConfirm").value) {
-          obj.password = document.querySelector("#userPassword").value;
-
-          if (user.email == obj.email) {
-            emailFormen.style.backgroundColor = "red";
-          } else {
-            if (emailFormen.checkValidity() != true) {
-              console.log(emailFormen.checkValidity());
-              emailFormen.style.backgroundColor = "red";
-            } else {
-              obj.email = emailFormen.value;
-
-              if (obj.telefoneNr == user.telefoneNr) {} else {
-                obj.telefoneNr = document.querySelector("#userTlf").value;
-                userCounter++;
-                obj.userID = Math.random().toString(36).substr(2, 9);
-              }
-            }
-          }
-        } else {
-          userPassword.style.backgroundColor = "red";
-          userPasswordTwo.style.backgroundColor = "red";
-        }
-      }
-    }
-  });
-
-  if (userCounter == userArray.length) {
-    console.log("CORRECT");
-    displaySecondForm(obj);
-  } else {}
-}
-
-function displaySecondForm(obj) {
-  console.log(obj);
-  userData.style.display = "none";
-  userInfo.style.display = "block";
-  document.querySelector("#formUserInfoButton").addEventListener("click", function () {
-    saveSecondSetOfData(obj);
-  });
-}
-
-function saveSecondSetOfData(obj) {
-  obj.fornavn = document.querySelector("#userFirstName").value;
-  obj.efternavn = document.querySelector("#userLastName").value;
-  obj.adresse = document.querySelector("#userAdress").value;
-  obj.city = document.querySelector("#userCity").value;
-  var userCounter = 0;
-  userArray.forEach(function (user) {
-    if (user.CPRnr == obj.CPRnr) {
-      alert("Dette CPR nummer brugt før");
-    } else {
-      obj.CPRnr = document.querySelector("#userCpr").value;
-      userCounter++;
-    }
-  });
-
-  if (userCounter == userArray.length) {
-    console.log("CORRECT");
-    sendInfoToRest(obj);
-  } else {
-    alert("Something Was Wrong");
+function getBundleURLCached() {
+  if (!bundleURL) {
+    bundleURL = getBundleURL();
   }
+
+  return bundleURL;
 }
 
-function sendInfoToRest(obj) {
-  console.log("SEND");
-  nemId.style.display = "block";
-  userInfo.style.display = "none";
-  var postData = JSON.stringify(obj);
-  console.log(postData);
-  fetch("https://examusers-4b00.restdb.io/rest/databaseuser?", {
-    method: "post",
-    headers: {
-      "Content-Type": "application/json; charset=utf-8",
-      "x-apikey": "5cdbfbb9f66d7b1062cb34b7",
-      "cache-control": "no-cache"
-    },
-    body: postData
-  });
-  fetchMyJson();
+function getBundleURL() {
+  // Attempt to find the URL of the current script and use that as the base URL
+  try {
+    throw new Error();
+  } catch (err) {
+    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
+
+    if (matches) {
+      return getBaseURL(matches[0]);
+    }
+  }
+
+  return '/';
 }
-},{}],"../../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+
+function getBaseURL(url) {
+  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
+}
+
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+},{}],"../../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
+var bundle = require('./bundle-url');
+
+function updateLink(link) {
+  var newLink = link.cloneNode();
+
+  newLink.onload = function () {
+    link.remove();
+  };
+
+  newLink.href = link.href.split('?')[0] + '?' + Date.now();
+  link.parentNode.insertBefore(newLink, link.nextSibling);
+}
+
+var cssTimeout = null;
+
+function reloadCSS() {
+  if (cssTimeout) {
+    return;
+  }
+
+  cssTimeout = setTimeout(function () {
+    var links = document.querySelectorAll('link[rel="stylesheet"]');
+
+    for (var i = 0; i < links.length; i++) {
+      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
+        updateLink(links[i]);
+      }
+    }
+
+    cssTimeout = null;
+  }, 50);
+}
+
+module.exports = reloadCSS;
+},{"./bundle-url":"../../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"index.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"./flyvendealien-01.svg":[["flyvendealien-01.26d210b8.svg","flyvendealien-01.svg"],"flyvendealien-01.svg"],"./spilknap-03.svg":[["spilknap-03.e3a217e4.svg","spilknap-03.svg"],"spilknap-03.svg"],"_css_loader":"../../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -493,5 +392,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","form.js"], null)
-//# sourceMappingURL=/form.d01534eb.js.map
+},{}]},{},["../../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js"], null)
+//# sourceMappingURL=/Exam%20klister.9ad09f98.js.map
