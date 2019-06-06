@@ -10885,6 +10885,15 @@ function start() {
   document.querySelector("#autoPlay").addEventListener("click", function () {
     loopTheLoop();
   });
+  setTimeout(showModalForCasino, 3000000);
+}
+
+function showModalForCasino() {
+  var modalForCasino = document.querySelector("#modalForCasino");
+  document.querySelector("#casino2").addEventListener("click", function () {
+    window.location.href = "form.html";
+  });
+  modalForCasino.style.display = "block";
 }
 
 function loopTheLoop() {
@@ -11509,7 +11518,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59245" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60818" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -94,6 +94,16 @@ function start() {
   document.querySelector("#autoPlay").addEventListener("click", () => {
     loopTheLoop();
   });
+
+  setTimeout(showModalForCasino, 3000000);
+}
+
+function showModalForCasino() {
+  let modalForCasino = document.querySelector("#modalForCasino");
+  document.querySelector("#casino2").addEventListener("click", () => {
+    window.location.href = "form.html";
+  });
+  modalForCasino.style.display = "block";
 }
 
 function loopTheLoop() {

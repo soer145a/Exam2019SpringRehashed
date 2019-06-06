@@ -12,6 +12,7 @@ $MainYellow: #ffd32a;
   margin: 0;
   padding: 0;
 }
+
 body {
   @extend .reset;
   overflow-y: hidden;
@@ -31,10 +32,54 @@ body {
   }
 }
 
+#modalForCasino {
+  width: 100vw;
+  position: absolute;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+  z-index: 100000;
+
+  h2 {
+    color: white;
+    position: relative;
+    text-align: center;
+    top: 26vh;
+    font-size: 2.5em;
+    font-family: $DisplayFont;
+  }
+
+  p {
+    color: white;
+    position: relative;
+    text-align: center;
+    top: 25vh;
+    font-size: 3em;
+    font-family: $DisplayFont;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+  }
+
+  p:hover {
+    transform: scale(1.1);
+    color: $MainYellow;
+  }
+
+  img {
+    text-align: center;
+    color: white;
+    position: relative;
+    text-align: center;
+    top: -24vh;
+    left: 38vw;
+  }
+}
+
 @media screen and (min-width: 627px) {
   main {
     display: none;
   }
+
   #loadingScreen {
     top: 0;
     left: 0;
@@ -584,5 +629,357 @@ body {
     font-family: sans-serif;
 
     z-index: 11;
+  }
+}
+@media only screen and (min-width: 667px) and (max-width: 667px) {
+  body {
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
+  #baggrund {
+    transform: scale(1.2);
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    img {
+      z-index: 0;
+      position: absolute;
+      width: 100vw;
+      height: 100vh;
+    }
+  }
+  #frame {
+    width: 50vw;
+    height: 58vh;
+    position: absolute;
+    top: 11vw;
+    left: 25vw;
+    z-index: 1;
+    background-color: black;
+    opacity: 0.7;
+  }
+  #baggrundFrame {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0vw;
+    left: 0;
+    z-index: 3;
+
+    img {
+      width: 100vw;
+
+      height: 100vh;
+      z-index: 4;
+      transform: scale(1);
+    }
+  }
+  #spilOverlay {
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    transform: scale(0.56);
+    z-index: 4;
+  }
+
+  #startSpil {
+    position: absolute;
+
+    left: 44vw;
+    bottom: -7vw;
+
+    z-index: 4;
+    transform: scale(0.3);
+  }
+  #autoPlay {
+    position: absolute;
+    bottom: -3vw;
+
+    right: 25vw;
+    z-index: 10;
+    transform: scale(0.3);
+  }
+  #autoPlaytext {
+    position: absolute;
+    color: white;
+    bottom: 3.5vw;
+
+    right: 32.7vw;
+    z-index: 110;
+    font-family: $DisplayFont;
+    font-size: 0.7em;
+    pointer-events: none;
+  }
+
+  #wheelArea {
+    z-index: 2;
+    width: 70vw;
+    height: 75vh;
+    transform: scale(0.745);
+    position: absolute;
+    top: 7vw;
+    left: 15vw;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 0.4vw;
+
+    .wheel {
+      z-index: 3;
+      display: grid;
+      grid-gap: 1.4vw;
+      grid-template-columns: 1fr;
+
+      .displayCaseDiv {
+        width: 100%;
+        height: 13vw;
+        z-index: 2;
+      }
+    }
+  }
+
+  #gevinstBorder {
+    position: absolute;
+    width: 10vw;
+    transform: scale(0.5);
+    height: 2vw;
+    bottom: 2vw;
+    right: 20vw;
+    z-index: 10;
+    transition: 0.5s;
+  }
+  #gevinst p {
+    color: white;
+    margin: 1vw;
+    transform: translate(3vw, -6.5vw) scale(1);
+    bottom: 0vw;
+    right: 5vw;
+
+    z-index: 11;
+  }
+
+  .gevinstSvg {
+    width: 16vw;
+    position: absolute;
+    bottom: -5.5vh;
+  }
+
+  #satsLabel {
+    color: white;
+    position: absolute;
+    bottom: -1.5vw;
+    left: 27vw;
+    z-index: 10;
+    transform: scale(0.5);
+    h2 {
+      position: absolute;
+      top: 0vw;
+      left: 8vw;
+    }
+    input {
+      top: 8vw;
+      left: 14vw;
+      position: absolute;
+      width: 5vw;
+      transform: scale(1.1);
+    }
+  }
+  #saldoFelt {
+    color: white;
+    position: absolute;
+    bottom: -1.5vw;
+    left: 10vw;
+    z-index: 10;
+    transform: scale(0.5);
+    h2 {
+      position: absolute;
+      top: 0vw;
+      left: 6vw;
+    }
+    #saldoText {
+      position: absolute;
+      top: 6vw;
+      left: 9vw;
+    }
+  }
+}
+
+@media screen and (min-width: 1680px) and (max-width: 1680px) {
+  body {
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
+  #baggrund {
+    transform: scale(1.2);
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    img {
+      z-index: 0;
+      position: absolute;
+      width: 100vw;
+      height: 100vh;
+    }
+  }
+  #frame {
+    width: 50vw;
+    height: 58vh;
+    position: absolute;
+    top: 11vw;
+    left: 25vw;
+    z-index: 1;
+    background-color: black;
+    opacity: 0.7;
+  }
+  #baggrundFrame {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0vw;
+    left: 0;
+    z-index: 3;
+
+    img {
+      width: 100vw;
+
+      height: 100vh;
+      z-index: 4;
+      transform: scale(1);
+    }
+  }
+  #spilOverlay {
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    transform: scale(0.59);
+    z-index: 4;
+  }
+
+  #startSpil {
+    position: absolute;
+
+    left: 45vw;
+    bottom: 0vw;
+
+    z-index: 4;
+    transform: scale(0.6);
+  }
+  #autoPlay {
+    position: absolute;
+    bottom: 1.5vw;
+
+    right: 38vw;
+    z-index: 10;
+    transform: scale(0.7);
+  }
+  #autoPlaytext {
+    position: absolute;
+    color: white;
+    bottom: 3.5vw;
+
+    right: 40.6vw;
+    z-index: 110;
+    font-family: $DisplayFont;
+    font-size: 1.2em;
+    pointer-events: none;
+  }
+
+  #wheelArea {
+    z-index: 2;
+    width: 65vw;
+    height: 75vh;
+    transform: scale(0.745);
+    position: absolute;
+    top: 6vw;
+    left: 17.5vw;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 0.4vw;
+
+    .wheel {
+      z-index: 3;
+      display: grid;
+      grid-gap: 1vw;
+      grid-template-columns: 1fr;
+
+      .displayCaseDiv {
+        width: 100%;
+        height: 13vw;
+        z-index: 2;
+      }
+    }
+  }
+
+  #gevinstBorder {
+    position: absolute;
+    width: 10vw;
+    transform: scale(0.8);
+    height: 2vw;
+    bottom: 2vw;
+    right: 27vw;
+    z-index: 10;
+    transition: 0.5s;
+  }
+  #gevinst p {
+    color: white;
+    margin: 1vw;
+    transform: translate(5vw, -3.5vw) scale(1);
+    bottom: 0vw;
+    right: 5vw;
+
+    z-index: 11;
+  }
+
+  .gevinstSvg {
+    width: 16vw;
+    position: absolute;
+    bottom: 0vh;
+    transform: scale(0.8);
+  }
+
+  #satsLabel {
+    color: white;
+    position: absolute;
+    bottom: 2vw;
+    left: 30vw;
+    z-index: 10;
+    transform: scale(0.8);
+    h2 {
+      position: absolute;
+      top: 0vw;
+      left: 3.2vw;
+    }
+
+    input {
+      top: 3vw;
+      font-family: $DisplayFont;
+      padding-left: 1vw;
+      left: 4vw;
+      border: 1px solid white;
+      border-radius: 5px;
+      position: absolute;
+      width: 2.5vw;
+      transform: scale(1.1);
+    }
+  }
+  #saldoFelt {
+    color: white;
+    position: absolute;
+    bottom: 2vw;
+    left: 18vw;
+    z-index: 10;
+    transform: scale(0.8);
+    h2 {
+      position: absolute;
+      top: 0vw;
+      left: 3vw;
+    }
+    #saldoText {
+      position: absolute;
+      top: 2vw;
+      left: 3.5vw;
+      font-size: 1.3em;
+    }
   }
 }
