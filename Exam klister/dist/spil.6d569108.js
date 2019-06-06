@@ -11425,7 +11425,7 @@ function calcMinigameVictory(planet) {
     setTimeout(function () {
       enLargeMyGevinst();
       modal.style.display = "none";
-    }, 3000);
+    }, 3000000);
   }
 
   if (minigameCalc >= 25 && minigameCalc <= 55) {
@@ -11438,7 +11438,7 @@ function calcMinigameVictory(planet) {
     setTimeout(function () {
       modal.style.display = "none";
       enLargeMyGevinst();
-    }, 3000);
+    }, 3000000);
   }
 
   if (minigameCalc >= 55 && minigameCalc <= 100) {
@@ -11447,7 +11447,7 @@ function calcMinigameVictory(planet) {
     modalGevinstText.textContent = "";
     setTimeout(function () {
       modal.style.display = "none";
-    }, 3000);
+    }, 3000000);
   }
 }
 
@@ -11517,7 +11517,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62387" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64124" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

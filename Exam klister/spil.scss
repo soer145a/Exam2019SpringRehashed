@@ -31,7 +31,23 @@ body {
     transform: scale(1.1);
   }
 }
+#modalInformation {
+  width: 60vw;
+  height: 10vw;
+  position: absolute;
+  left: 20vw;
+  top: 2vw;
 
+  color: white;
+  p {
+    text-align: center;
+    font-size: 2em;
+  }
+  h2 {
+    text-align: center;
+    font-size: 3em;
+  }
+}
 #modalForCasino {
   width: 100vw;
   position: absolute;
@@ -84,11 +100,11 @@ body {
   }
   @keyframes pulsing {
     from {
-      transform: scale(0.35);
+      transform: scale(1);
     }
 
     to {
-      transform: scale(0.3);
+      transform: scale(1.1);
     }
   }
 
@@ -172,10 +188,11 @@ body {
     }
   }
 }
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 1919px) {
   main {
     display: none;
   }
+
   #loadingScreen {
     top: 0;
     left: 0;
@@ -430,6 +447,21 @@ body {
     }
   }
 }
+#logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  img {
+    width: 70%;
+    transform: rotate(-20deg);
+  }
+}
 
 .modal {
   display: none; /* Hidden by default */
@@ -527,6 +559,32 @@ body {
     overflow-y: hidden;
     overflow-x: hidden;
   }
+  #modalInformation {
+    width: 60vw;
+    height: 10vw;
+    position: absolute;
+    left: 20vw;
+    top: 2vw;
+
+    color: white;
+    p {
+      text-align: center;
+      font-size: 1.5em;
+    }
+    h2 {
+      text-align: center;
+      font-size: 2em;
+    }
+  }
+  #logo {
+    position: absolute;
+    top: 0;
+    left: 40vw;
+    z-index: 20;
+    img {
+      width: 30%;
+    }
+  }
   #baggrund {
     transform: scale(1.2);
     position: absolute;
@@ -577,11 +635,14 @@ body {
   #startSpil {
     position: absolute;
 
-    left: 44vw;
-    bottom: -5vw;
+    left: 50vw;
+    bottom: 1vw;
 
     z-index: 4;
-    transform: scale(0.3);
+    transform: scale(1);
+    img {
+      width: 40%;
+    }
   }
   #autoPlay {
     position: absolute;

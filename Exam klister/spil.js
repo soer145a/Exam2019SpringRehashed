@@ -716,7 +716,7 @@ function calcMinigameVictory(planet) {
     setTimeout(() => {
       enLargeMyGevinst();
       modal.style.display = "none";
-    }, 3000);
+    }, 3000000);
   }
   if (minigameCalc >= 25 && minigameCalc <= 55) {
     victorytext.parentElement.classList.add("lilleGevinst");
@@ -730,7 +730,7 @@ function calcMinigameVictory(planet) {
     setTimeout(() => {
       modal.style.display = "none";
       enLargeMyGevinst();
-    }, 3000);
+    }, 3000000);
   }
   if (minigameCalc >= 55 && minigameCalc <= 100) {
     victorytext.parentElement.classList.add("nitte");
@@ -739,7 +739,7 @@ function calcMinigameVictory(planet) {
 
     setTimeout(() => {
       modal.style.display = "none";
-    }, 3000);
+    }, 3000000);
   }
 }
 
